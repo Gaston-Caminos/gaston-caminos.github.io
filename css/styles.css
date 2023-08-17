@@ -1,0 +1,627 @@
+/*********************************************** CONFIGURACIÓN GLOBAL *********************************/
+:root {
+    --color_principal_1: #28036A;
+    --color_principal_2: #000;
+    --color_principal_3: #5EA2FA;
+    --color_secundario_1: #EAEAEA;
+    --color_secundario_2: #45298E;
+    --color_fuente_1: #FFF;
+    --color_fuente_2: #F0440D;
+    --fuente_1: "Anton";
+    --fuente_2: "Raleway";
+    --fuente_3: "sans-serif";
+    scroll-behavior: smooth;
+    
+}
+
+* {
+    font-family: var(--fuente_2), var(--fuente_3);
+}
+
+/********* Estilos para la barra de desplazamiento **********/
+
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Fondo de la pista */
+::-webkit-scrollbar-track {
+    background-color: var(--color_principal_1); /* Color de fondo de la pista */
+}
+
+/* Pulgar de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background-color: var(--color_fuente_2); /* Color del pulgar */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Estilo cuando se pasa el cursor sobre el pulgar */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color_fuente_2); /* Cambio de color al pasar el cursor */
+}
+
+/* Centro el texto de cada sección de la página */
+.centrado { 
+    text-align: center;
+}
+
+.justificado {
+    text-align: justify;
+}
+
+.alinear_izq {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px; 
+    align-items:flex-start;
+    text-align:left;
+}  
+  
+
+.titulo {
+    padding: 1rem 0 2rem 2rem;
+    font-family: var(--fuente_2), var(--fuente_3);
+}
+
+.negrita{
+    font-weight: bold;
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+.subtitulo {
+    padding: 1rem 0 2rem 5rem;
+    font-family: var(--fuente_2), var(--fuente_3);
+}
+
+.descripcion {
+    padding: 0 5rem;
+}
+
+.emoji {
+    opacity: 0;
+}
+/*********************************************** CABECERA *********************************************/
+
+.language_selector {
+    color: var(--color_fuente_1);
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    display: flex;
+    align-items: center;
+    z-index: 2000;
+}
+
+.icono_idiomas {
+    cursor: pointer;
+    color: var(--color_fuente_1);
+    font-size: 32px;
+    margin-right: 10px;
+    transition: 0.3s ease-in-out;
+    padding: 5px;
+
+}
+
+.icono_idiomas.scrolled {
+    color: var(--color_principal_1);
+}
+  
+.icono_idiomas:hover {
+    margin-right: 20px;
+    color: var(--color_fuente_1);
+}
+
+ 
+.language-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: max-width 0.3s ease-in-out;
+    max-width: 0;
+}
+  
+.language_selector:hover .language-list {
+    max-width: 300px; 
+}
+  
+.language-list li {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+  
+.flag-icon {
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+    background-size: cover;
+    margin-right: 5px;
+}
+  
+.flag-label {
+    font-size: 14px;
+}
+
+.link_idioma {
+    text-decoration: none;
+    color: var(--color_fuente_1);
+}
+
+.link_idioma:hover {
+    text-decoration: none;
+    color: var(--color_fuente_1);
+}
+  
+  
+.cabecera {
+    background-color: var(--color_principal_1);
+    /*background: url(imagenes/fondo_nebulosa.mp4);*/
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.nombre {
+    height: 100vh;
+}
+
+.saludo {
+    overflow: hidden;
+}
+
+.iniciar {
+    display: flex;
+    justify-content: center;
+}
+
+#fraseAleatoria{
+    color: var(--color_secundario_1);
+    text-align: center;
+    margin: 15px;
+}
+
+.iniciar__boton {
+    font-family: var(--fuente_2), var(--fuente_3);
+    font-size: large;
+    border-style: solid;
+    border-color: var(--color_fuente_1);
+    padding: 1rem;
+    background-color: transparent;
+    color: var(--color_fuente_1);
+    transition: all 0.5s ease-in-out ;
+}
+
+.iniciar__boton:hover {
+    background-color: var(--color_fuente_1);
+    color: var(--color_principal_1);
+}
+
+.nombre__presentacion {
+    font-family: var(--fuente_2), var(--fuente_3);
+    font-size: 48px;
+    color: var(--color_fuente_1);
+    text-shadow: 5px 5px 10px var(--color_principal_2);
+    padding: 1rem;
+    margin-top: 45vh;
+    /*margin-bottom: 10%;*/
+    transition: all 0.5s ease-in-out;
+}
+
+.nombre_destacado {
+    color: var(--color_fuente_2);
+}
+
+.nombre__subtitulo {
+    color: var(--color_fuente_1);
+}
+
+.mano-saludo {
+    position: absolute;
+    top: 230px;
+    left: 150px;
+    font-size: 130px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.saludo:hover .mano-saludo {
+    opacity: 1;
+    animation: wave 0.5s ease-in-out;
+}
+
+.saludo:hover .nombre__presentacion {
+    transform: translateX(100px);
+}
+
+/******** MENU *******/
+.menu {
+    position: sticky;
+    top: 0px;
+    height: auto;
+    width: 100%;
+    z-index: 1000;
+    border-style:solid;
+    background-color: var(--color_principal_1);
+    border-width: 0;
+    border-bottom-width: 10px;
+    border-bottom-color: var(--color_fuente_2);
+    box-shadow: 0px 4px 6px -2px var(--color_principal_2);
+}
+
+.menu__menu {
+    position: sticky; /* Solucionar esto */
+    align-self: flex-start;
+    text-transform: uppercase;
+    font-family: var(--fuente_2), var(--fuente_3);
+    color: var(--color_fuente_1);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__lista {
+    display: flex;
+}
+
+.menu__item {
+    list-style: none;
+    padding: 1rem;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: var(--color_fuente_1);
+    transition: all .5s ease-in-out;
+}
+
+.menu__link:hover {
+    color: var(--color_fuente_2);
+    text-decoration: none;
+    
+}
+
+/*************************************************** SOBRE MI ******************************************/
+
+#sobre_mi {
+    padding-bottom: 2em;
+    scroll-margin-top: 80px;
+}
+
+/* Agregar una bandera de argentina cuando pase por encima del texto */
+
+.sobre_mi__caja {
+    /*width: 500px;*/
+}
+
+.bandera_arg {
+    position: relative;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Efecto para que aparezca la bandera Arg, fijarse si se queda o no
+.bandera_arg::after {
+    content: "\1F1E6\1F1F7"; 
+    font-size: 1em;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 5px; 
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
+}*/
+
+
+.bandera_arg:hover::after {
+    opacity: 1; /* Mostrar al pasar el mouse */
+}
+
+.mate {
+    position: relative;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.mate::after {
+    content: "\1F9C9"; 
+    font-size: 1em;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 5px;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
+}
+
+.mate:hover::after {
+    opacity: 1;
+}
+
+.mate:hover + .texto_a_mover {
+    padding-left: 20px; /* Ajusta el valor según lo desees */
+    transition: all 0.5s ease-in-out; /* Agrega una transición suave */
+}
+
+.descargar_cv {
+    margin-left: 10%;
+}
+
+.logo_cv {
+    font-size: 48px;
+    color: var(--color_principal_1);
+}
+/************************************************* EDUCACIÓN **********************************************/
+
+#educacion {
+    background: var(--color_secundario_1);
+    scroll-margin-top: 80px;
+}
+
+.idiomas {
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+}
+
+.idiomas__idioma {
+    text-align: center;
+    transition: 0.3s ease-in-out all;
+}
+
+.idiomas__idioma:hover {  
+    font-weight: bold;
+    filter: drop-shadow(0px 5px 15px var(--color_principal_1));
+}
+
+.banderas {
+    display: flex;
+    align-items: flex-end;
+}
+
+.bandera {
+    width: 100px;
+    height: 50px;   
+    margin: 1em;
+}
+
+.español:hover {
+
+}
+
+.cui {
+    height: 50px;
+    width: 200px;
+    margin: 1em 1em 1em 5em;
+}
+
+/*********************************************** PORTAFOLIO ***************************************/
+#portfolio {
+    scroll-margin-top: 70px;
+}
+
+.proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.oculto {
+    display: none;
+}
+
+.proyecto {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 1.5em;
+}
+
+.proyecto__titulo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.proyecto__imagen {
+    width: 300px;
+    height: 250px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+
+.proyecto__descripcion {
+    margin-top: 5px;
+}
+
+.proyecto__boton {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--color_principal_1);
+    color: var(--color_fuente_1);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.5s ease-in-out;
+}
+
+.link:visited {
+    text-decoration: none;
+    color: var(--color_fuente_1);
+}
+
+.proyecto__boton:hover {
+    text-decoration: none;
+    color: var(--color_fuente_1);
+    transform: scale(1.2);
+    box-shadow: 0px 5px 15px var(--color_fuente_2);
+}
+
+#mas_proyectos {
+    color: var(--color_fuente_1);
+    background-color: var(--color_principal_1);
+    border: none;
+    border-radius: 5px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    margin: 0 5% 2% 5%;
+    transition: 0.5s ease-in-out;
+}
+
+#mas_proyectos:hover {
+    box-shadow: 0px 5px 15px var(--color_fuente_2);
+}
+
+/*********************************** CERTIFICACIONES ********************************/
+#certificaciones {
+    background-color: var(--color_secundario_1);
+    scroll-margin-top: 70px;
+}
+
+.certificados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.certificado {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 1.5em;
+}
+
+.certificado__titulo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.certificado__imagen {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+
+.certificado__imagen__escalada {
+    width: 50%;
+    height: auto;
+    transform: scale(1);
+}
+
+.certificado__descripcion {
+    margin-top: 5px;
+}
+
+/*********************************** CONTACTO ***************************************/
+
+#contacto {
+    padding-bottom: 2em;
+}
+.contacto__lista { 
+    margin-left: 10%;
+}
+
+.contacto__item {
+    padding: 5px;
+}
+
+
+.flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color_principal_1);
+    color: var(--color_fuente_1);   
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.flotante.mostrar {
+    opacity: 1;
+  }
+
+.flotante:hover {
+    text-decoration: none;
+    color: var(--color_fuente_1);
+    filter: drop-shadow(0px 5px 5px var(--color_fuente_2));
+}
+  
+/********************************** PIE DE PAGINA ***********************************/
+.footer {
+    font-family: var(--fuente_2), var(--fuente_3);
+    font-size: small;
+    background-color: var(--color_principal_1);
+    color: var(--color_fuente_1);
+    height: 140px;
+    text-align: center;
+    border-style:solid;
+    border-width: 0;
+    border-top-width: 10px;
+    border-top-color: var(--color_fuente_2);
+}
+
+.creditos__nombre {
+    padding-top: 1.5em; 
+}
+
+.social-icons {
+    list-style: none;
+    display: inline-flex;
+    margin: 0;
+    padding: 1.5em;
+}
+
+.social-icons li {
+    margin-right: 10px;
+    transition: 0.1s ease-in-out;
+}
+
+.social-icons li:hover {
+    transform: scale(1.5);
+    filter: drop-shadow(5px 5px 5px var(--color_principal_2))
+}
+
+.social-icons a {
+    color: var(--color_fuente_1);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.version_beta {
+    background-color: var(--color_secundario_2);
+    padding: 4px 4px;
+}
+
+
+/*********************************** RESPONSIVIDAD **********************************/
+
+
+/*********************************** ANIMACIONES ************************************/
+
+/* Animación del saludo de la mano en el título */
+@keyframes wave {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0);
+    }
+    25% {
+        transform: translate(5px, -5px) rotate(20deg);
+    }
+    50% {
+        transform: translate(0, 0) rotate(0);
+    }
+    75% {
+        transform: translate(5px, -5px) rotate(20deg);   
+    }
+}

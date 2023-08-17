@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Gastón Caminos - Portfolio</title>
+        <link rel="icon" href="imagenes/sound-wave.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway:ital@0;1&display=swap" 
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header class="cabecera" id="cabecera">
+
+            <div class="language_selector">
+                <div class="icono_idiomas">
+                    <iconify-icon icon="clarity:language-line"></iconify-icon> 
+                </div>
+                <ul class="language-list">
+                    <li><a href="index-en.html"class="link_idioma"><span class="flag-icon flag-icon-gb"></span> <span class="flag-label">English</span></a></li>
+                  <li><a href="index.html"class="link_idioma"><span class="flag-icon flag-icon-es"></span> <span class="flag-label">Spanish</span></a></li>
+                  <li><a href="index-de.html" class="link_idioma"><span class="flag-icon flag-icon-de"></span> <span class="flag-label">German</span></a></li>
+                </ul>
+            </div>
+                            
+              
+            <div class="nombre">
+                <div class="saludo">
+                    <p class="nombre__presentacion text-center">Hi! my name is <span class="nombre_destacado">Gastón Caminos</span>.</p>
+                    <span class="emoji mano-saludo">👋</span>
+                </div>
+                <p class="nombre__subtitulo text-center">I am an advanced Sound Engineering student.</p> 
+                <div id="fraseAleatoria" class="cursiva"></div>
+                <div class="iniciar"><a class="boton__enlace" href="#menu"><button class="iniciar__boton">Get to know me better</button></a></div>
+            </div>
+        </header>
+
+        <div class="menu">
+            <nav class="menu__menu" id="menu">
+                <ul class="menu__lista">
+                    <li class="menu__item"><a href="#cabecera" class="menu__link" data-translate="inicio">Home</a></li>
+                    <li class="menu__item"><a href="#sobre_mi" class="menu__link" data-translate="sobre_mi">About me</a></li>
+                    <li class="menu__item"><a href="#educacion" class="menu__link" data-translate="educacion">Education</a></li>
+                    <li class="menu__item"><a href="#portfolio" class="menu__link" data-translate="portafolio">Portfolio</a></li>
+                    <li class="menu__item"><a href="#certificaciones" class="menu__link" data-translate="certificaciones">Certifications</a></li>
+                    <li class="menu__item"><a href="#contacto" class="menu__link" data-translate="contacto">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section id="sobre_mi">
+            <h2 class="sobre_mi__titulo titulo negrita" data-translate="sobre_mi">About me</h2>
+            <div class="sobre_mi__caja">
+                <p class="sobre_mi__descripcion justificado descripcion" data-translate="sobre_mi__descripcion">
+                    My name is Gastón Gabriel Caminos, I am <span id="edad"></span> years old and I am of Argentine nationality; I was born in Buenos Aires on Friday, October 2, 1998, in San Miguel.
+                    I am a sound engineering student, I love acoustics and programming, and I work both fields together seeking a fusion that allows me to find innovative ways to solve problems and create effective solutions.
+                    In addition to the technical sphere, I find a deep connection with art. More precisely with music. I find its magic in the strings of a guitar that I play with affection, and in the notes that come out when singing with my heart; this art becomes a manifestation of the tradition transmitted over generations, rooting me in the passion that my father and grandfather shared.
+                    I also immerse myself and enjoy the seventh art, I enjoy Family gatherings, moments where we share laughter, stories, and affection. Additionally, I love to enjoy the beauty of the landscape on walks, under the radiant sun or cloudy days, and everything is complemented with a warm <span class="mate"><a href="https://en.wikipedia.org/wiki/Mate_(drink)"><em>mate</em></a></span> <span class="texto_a_mover">in hand</span>.
+                    In my work experience, I have actively applied the knowledge acquired during my career. I have worked as a radio assistant technician on a program hosted by my father, participated in the assembly of live sound systems for bands, and performed acoustic measurements to evaluate multi-use spaces. If you want to know more details about my education and experience, I invite you to download my CV so you can see it. Additionally, I invite you to keep exploring my page for additional information.</p>
+
+                <div class="descargar_cv"><a href="https://drive.google.com/file/d/1H184-m8MPLSGVIhbX53DiUFu8qS11nBp/view?usp=sharing" target="_blank" download><i class="fas fa-file-alt logo_cv"></i> Download CV.
+                </a></div>
+                
+            </div>
+
+        </section>
+
+        <section id="educacion">
+            <h2 class="educacion__titulo titulo negrita">Education</h2>
+            <p class="educacion__descripcion justificado descripcion">I have academic training in the field of engineering. I am an advanced student of <a class="link_carrera" href="http://www.untref.edu.ar/carrera/ingenieria-de-sonido" target="_blank">sound engineering</a>; a career in which I have completed 34 out of 44 subjects (I am 77% an engineer 😄).
+            My journey in engineering covers an exciting spectrum of disciplines. I have explored everything from acoustic design and noise control to vibration analysis and electroacoustics. My skills include creating immersive sound environments, mathematical modeling to solve acoustic problems, and audio production. In summary, I am passionate about merging the science of sound with creativity to create exceptional listening experiences. 
+            </p>
+            <h3 class="educacion__subtitulo subtitulo">Languages in which I communicate</h3>
+            <div id="fraseIdioma" class="descripcion cursiva">  </div>
+
+            
+            <div class="idiomas">
+                <div class="banderas">
+                    <div class="idiomas__idioma">
+                        <img src="imagenes/es.png" alt="Spanish flag" class="bandera español">
+                        <p class="idiomas__descripcion">Spanish native</p>
+                    </div>
+                    <div class="idiomas__idioma">
+                        <img src="imagenes/gb.png" alt="English flag" class="bandera ingles">
+                        <p class="idiomas__descripcion">English level C1</p>
+                    </div>
+                    <div class="idiomas__idioma">
+                        <img src="imagenes/ger.png" alt="German flag" class="bandera aleman">
+                        <p class="idiomas__descripcion">German level B2</p>
+                    </div>
+                </div>
+                <div class="cui">
+                    <a href="https://cui.edu.ar/" target="_blank"><img src="imagenes/cui.png" alt="Centro Universitario de Idiomas - CUI" class="cui"></a>
+                </div>
+            </div>
+        
+        </section>
+
+        <section id="portfolio">
+
+            
+            <h2 class="portfolio__titulo titulo negrita">Portfolio</h2>
+            <p class="portfolio__descripcion descripcion">
+                I invite you to see a selection of projects in which I worked both during my university career and personally. These projects cover a wide range of areas, from acoustics to digital signal processing and applied electronics. If any of these descriptions intrigues you, don't hesitate to click on the "See more" button to access the complete document.
+            </p>
+            <div class="proyectos">
+
+                <div class="proyecto">
+                    <h4 class="proyecto__titulo negrita">Computer Model and Analysis of a Concert Hall </h4>
+                    <img class="proyecto__imagen" src="imagenes/proyecto_3d_modeling_of_concert_hall.PNG" alt="Project 1">
+                    <p class="proyecto__descripcion descripcion justificado">This article details the <b>modeling</b> and <b>acoustic simulation</b> carried out in the <b>EASE</b> software of the Arthur Sykes Rymer Auditorium at the University of York in the United Kingdom. The STI, AlCons, RT, Echo Speech, Echo Music, Lateral Fraction, and D/R parameters are calculated and compared with the on-site measurements taken in the theater. In the simulation, a spatial mapping of the audience area is also carried out for the intelligibility, D/R, and direct sound pressure level parameters. With fine-tuning of the simulation model, the <b>results</b> obtained are <b>consistent</b> with the on-site measurements and are considerably similar, with some differences existing at some frequencies.
+                    </p>
+                    <a class="proyecto__boton boton link" href="https://drive.google.com/file/d/1qG7Sy1jDbMJE6bfALB278GBXueRBnjJl/view?usp=sharing" target="_blank">See more</a>
+                </div>
+
+                <div class="proyecto">
+                    <h4 class="proyecto__titulo negrita" data-translate="proyecto_1">Algorithm for phase reconstruction based on the Griffin & Lim algorithm</h4>
+                    <img class="proyecto__imagen" src="imagenes/proyecto.PNG" alt="Prject 2">
+                    <p class="proyecto__descripcion descripcion justificado" data-translate="proyecto_1_descripcion">This report details the processes for designing a <b>phase reconstruction algorithm</b> based on the Griffin-Lim method. It seeks to estimate a time signal from a modified magnitude of the short-time Fourier transform (STFT) given. The algorithm is designed so that in each iteration, the mean squared error between the estimated STFT and the provided modified STFT (MSTFT) decreases. The developed algorithm has been tested with signals of different origins such as musical instruments, spoken voice, and nature sounds; the process has proven to be <b>effective</b> with a <b>minimal computational cost</b>
+                    </p>
+                    <a class="proyecto__boton boton link" href="https://drive.google.com/file/d/1ZqF2KVKG_LCL6_zBwfkoJDha_vlD-4Nq/view?usp=sharing" target="_blank">See more</a>
+                </div>
+
+                <div class="proyecto">
+                    <h4 class="proyecto__titulo negrita" data-translate="proyecto_2">Software Development for RIRs Processing</h4>
+                    <img class="proyecto__imagen" src="imagenes/proyecto_software_for_rirs.PNG" alt="Proyecto 2">
+                    <p class="proyecto__descripcion descripcion justificado">This study presents a software implementation for processing <b>room impulse response</b> designed in <b>Python</b>. The software is designed to be <b>user-friendly</b>, especially for users with little or no programming experience. The developed program is capable of obtaining room parameters such as RT20, RT30, EDT, Tt, EDTt, C50, C80, and IACC from a logarithmic sine sweep room response measurement. The results were compared with the popular Aurora Acoustical Parameters software, and it was concluded that <b>the developed software is reliable</b>, revealing a difference that does not exceed 5% in the calculation of temporal parameters within the valid frequency bands.
+                    </p>
+                    <a class="proyecto__boton boton link" href="https://drive.google.com/file/d/1VMuTqjZa3uUgOrMdHR8R7zu2y14eNvNT/view?usp=sharing" target="_blank">See more</a>
+                </div>
+
+                
+            </div>
+
+            <div class="proyectos oculto" id="proyectos_adicionales" >
+                <div class="proyecto">
+                    <h4 class="proyecto__titulo negrita">Design of a one-dimensional numerical diffuser</h4>
+                    <img class="proyecto__imagen" src="imagenes/proyecto_difusor.PNG" alt="Project 4">
+                    <p class="proyecto__descripcion descripcion justificado">In this report, the design of a one-dimensional QRD11 diffuser is carried out to be used in a recording studio located in a neighborhood of Buenos Aires. It is specifically designed to operate in a frequency range of 165 Hz to 745 Hz. For this, the Schroeder method is used, using a period sequence of 11 with an ACQF of 0.18, a cell width of 23 cm, a number of levels equal to 5, and a maximum depth of 50 cm. The <b>AFMG Reflex</b> software is used to verify the theoretical results, and it is modeled in 3D using SketchUp. As a result, a diffuser with a total surface area of 3.8 m<sup>2</sup> is obtained.
+                    </p>
+                    <a class="proyecto__boton boton link" href="https://drive.google.com/file/d/1nhHFr2GzUxYIxwSUvQJ6mznyl5VCRhnz/view?usp=sharing" target="_blank">See more</a>
+                </div>
+                
+                <div class="proyecto">
+                    <h4 class="proyecto__titulo negrita">Measurement of sensitivity, frequency response, directivity, and Thiele-Small parameters of a speaker</h4>
+                    <img class="proyecto__imagen" src="imagenes/proyecto_sensibilidad_direccionalidad.PNG" alt="Project 5">
+                    <p class="proyecto__descripcion descripcion justificado">This work details the process of measuring the characteristics of a speaker mounted in a cabinet. Measurements of sensitivity, frequency response, directivity, impedance, and Thiele-Small parameters were performed to carry out a subsequent analysis of the obtained results. It is worth noting that the measurements were not carried out in an acoustically treated environment, but rather in a "real" enclosure.
+                    </p>
+                    <a class="proyecto__boton boton link" href="https://drive.google.com/file/d/1_GHj7eVkEEQA_GiVCsja27Hi9Q9vGq0G/view?usp=sharing" target="_blank">See more</a>
+                </div>
+
+                <div class="proyecto">
+                    <h4 class="proyecto__titulo negrita">Redesign of the acoustics of a concert hall</h4>
+                    <img class="proyecto__imagen" src="imagenes/proyecto_acoustic_desing_concert_hall.PNG" alt="Project 6">
+                    <p class="proyecto__descripcion descripcion justificado">This study proposes an <b>acoustic redesign</b> for the auditorium of the Palacio de Bellas Artes, located in Mexico City. The objective of this redesign is to <b>improve the acoustic performance</b> of the auditorium. A comprehensive study was carried out to understand the acoustic behavior, as well as the interaction of the building with its environment. The spatial location of the cultural center was analyzed to identify possible sources of noise, and the room to be redesigned was studied to improve the line of sight while respecting local regulations.
+                    </p>
+                    <a class="proyecto__boton boton link" href="https://drive.google.com/file/d/1Uv3ZvP2DSBx2uGTpPcsnHbZfdjUDN-PK/view?usp=sharing" target="_blank">See more</a>
+                </div>
+
+                <div class="proyecto">
+                    <h4 class="proyecto__titulo negrita">Valve preamplifier for guitar with harmonic generator</h4>
+                    <img class="proyecto__imagen" src="imagenes/proyecto_amplificador_guitarra_valvular.PNG" alt="Proyecto 3">
+                    <p class="proyecto__descripcion descripcion justificado">The present project arises from the proposal to design a <b>valve preamplifier</b> for an <b>electric guitar</b>. Subsequently, the need arose for this preamplifier to have the ability to generate harmonics, in other words, to be a <b>valve distortion</b>. Then, based on the idea that the preamplifier should have two different types of distortion, a stage with silicon diodes was added. The system has the ability to generate a passive blend of both stages at the output.
+                    </p>
+                    <a class="proyecto__boton boton link" href="https://drive.google.com/file/d/1Sb5wzE-Vo2dcfgt_t2VM4yvoOH63tFfd/view?usp=sharing" target="_blank">See more</a>
+                </div>
+            </div>
+
+            <button id="mas_proyectos" class="boton">See more projects</button>
+        </section>
+
+        <section id="certificaciones">
+
+            <h2 class="certificaciones__titulo titulo negrita">Certifications</h2>
+            <p class="certificaciones__descripcion descripcion">
+                I want to show you a sample of the certifications and recognitions I obtained through courses and work experiences. Each certification represents an opportunity to grow and learn.
+            </p>
+
+            <div class="certificados">
+                <div class="certificado">
+                    <h4 class="certificado__titulo negrita">Python Programming</h4>
+                    <a href="imagenes/CertificadoPythonGrado.jpg" target="_blank">
+                        <img class="certificado__imagen" src="imagenes/CertificadoPythonGrado.jpg" alt="Certificado: Programación en Python">
+                    </a>
+                    <p class="certificado__descripción descripcion justificado">
+                        Certificate issued by the <b>National University of San Martín</b> on the Python programming course. During the course, topics such as <em>Machine Learning</em>, Data Analysis, and <b>OOP</b> were covered using various libraries.
+                    </p>
+                </div>
+
+                <div class="certificado">
+                    <h4 class="certificado__titulo negrita">Advanced Tutor</h4>
+                    <a href="https://accredible.tutor.com/27f22f36-90f0-475a-b106-7fb87a03b6f3#gs.4dng9j" target="_blank">
+                        <img class="certificado__imagen__escalada" src="imagenes/Advanced_tutor.png" alt="Certificado: Programación en Python">
+                    </a>
+                    <p class="certificado__descripción descripcion justificado">
+                        Badge issued by <a href="https://www.tutor.com/" target="_blank">Tutor.com</a> for achieving the level of "<b>Advanced Tutor</b>" in <b>Calculus</b> and <b>Precalculus</b> for high school and college students in the U.S.
+                    </p>
+                </div>
+
+                <div class="certificado">
+                    <h4 class="certificado__titulo negrita">Favorite tutor of 250 students</h4>
+                    <a href="https://accredible.tutor.com/d7f678ab-7e7d-433d-9370-6376e7773d66" target="_blank">
+                        <img class="certificado__imagen__escalada" src="imagenes/250_favorite.png" alt="Reconocimiento: Tutor favorito de 250 estudiantes">
+                    </a>
+                    <p class="certificado__descripción descripcion justificado">
+                        Badge issued by <a href="https://www.tutor.com/" target="_blank">Tutor.com</a> for being selected as "<b>Favorite Tutor</b>" by 250 students on the platform. <br>
+                        Highlighted skills: <em>Friendly, Empathetic, Encouraging, Supportive.</em>
+                    </p>
+                </div>
+
+                <div class="certificado">
+                    <h4 class="certificado__titulo negrita">JavaScript Algorithms and Data Structures</h4>
+                    <a href="https://www.freecodecamp.org/certification/Gaston_Caminos/javascript-algorithms-and-data-structures" target="_blank">
+                        <img class="certificado__imagen" src="imagenes/certificado_JS.PNG" alt="Certificado: Programación en Python">
+                    </a>
+                    <p class="certificado__descripción descripcion justificado">
+                        Certificate issued by <a href="https://www.freecodecamp.org">FreeCodeCamp</a> upon completing the <b>Algorithms</b> course with <b>JavaScript</b> and <b>Data Structures</b>. The course has a duration of 300 hours and covers concepts of <b>Object-Oriented Programming</b> (OOP) and <b>Functional Programming</b> (FP).
+                    </p>
+                </div>
+
+                <div class="certificado">
+                    <h4 class="certificado__titulo negrita">Responsive Web Design</h4>
+                    <a href="https://www.freecodecamp.org/certification/Gaston_Caminos/responsive-web-design" target="_blank">
+                        <img class="certificado__imagen" src="imagenes/certificado_diseño_web.PNG" alt="Certificado: Programación en Python">
+                    </a>
+                    <p class="certificado__descripción descripcion justificado">
+                        Certificate issued by <a href="https://www.freecodecamp.org">FreeCodeCamp</a> upon completing the <b>Responsive Web Design</b> course. This course, spanning 300 hours of study, focused on the concept of responsiveness in web design, providing a strong understanding of <b>HTML</b> and <b>CSS</b>.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="contacto">
+
+            <h2 class="contacto__titulo titulo negrita">Contact</h2>
+            <p class="contacto__descripcion descripcion">
+                Did something you see on my profile catch your interest, or would you like to know more? I invite you to get in touch with me via email by sending a message or a text, and I will gladly receive any proposal you have, aiming to respond promptly.
+            </p>
+
+            <ul class="contacto__lista">
+                <li class="contacto__item">Email: <a href="mailto:gastoncaminos98@gmail.com">gastoncaminos98@gmail.com</a></li>
+                <li class="contacto__item">Phone number: <a href="https://wa.me/541156378127" target="_blank">(+54 - 11) - 5637 - 8127</a>.</li>
+                <li class="contacto__item">Linkedin: <a href="https://www.linkedin.com/in/gast%C3%B3n-caminos/" target="_blank">Gastón Caminos</a>.</li>
+            </ul>
+
+            <p class="contacto__descripcion descripcion">
+                Thank you very much for taking a tour of my personal website; I hope you liked it. I wish you an excellent day!
+            </p>
+
+        </section>
+
+        <a href="#sobre_mi" class="flotante"><iconify-icon icon="solar:map-arrow-up-line-duotone"></iconify-icon></a>
+    </body>
+
+    <footer class="footer">
+        <div class="creditos">
+            <p class="creditos__nombre">© 2023 Crated by Gastón Caminos</p>
+            <ul class="social-icons">
+                <li><a href="https://www.linkedin.com/in/gast%C3%B3n-caminos/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/Gaston-Caminos" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="mailto:gastoncaminos98@gmail.com"><i class="fas fa-envelope"></i></a></li>
+                <li><a href="https://drive.google.com/file/d/1H184-m8MPLSGVIhbX53DiUFu8qS11nBp/view?usp=sharing" target="_blank" download><i class="fas fa-file-alt"></i>
+                </a>
+                </li>
+            </ul>
+            
+            <p class="version_beta"><iconify-icon icon="ph:gear-six-light"></iconify-icon> Beta version</p>
+        </div>
+    </footer>
+</html>
