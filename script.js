@@ -6,7 +6,7 @@ function simularSaludo() {
     saludoEmoji.style.opacity = '1';
     saludoEmoji.style.animation = 'wave 0.5s ease-in-out';
     
-    nombrePresentacion.style.transform = 'translateX(100px)';
+    nombrePresentacion.style.transform = 'translateX(5vw)';
     
     // Revertir los cambios después de 1.5 segundos
     setTimeout(function() {
@@ -26,7 +26,7 @@ var nombrePresentacion = document.querySelector('.nombre__presentacion');
 nombrePresentacion.addEventListener('mouseover', function() {
     saludoEmoji.style.opacity = '1';
     saludoEmoji.style.animation = 'wave 0.5s ease-in-out';
-    nombrePresentacion.style.transform = 'translateX(100px)';
+    nombrePresentacion.style.transform = 'translateX(5vw)';
 });
 
 nombrePresentacion.addEventListener('mouseout', function() {

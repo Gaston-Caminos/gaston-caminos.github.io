@@ -10,8 +10,7 @@
     --fuente_1: "Anton";
     --fuente_2: "Raleway";
     --fuente_3: "sans-serif";
-    scroll-behavior: smooth;
-    
+    scroll-behavior: smooth;   
 }
 
 * {
@@ -32,7 +31,7 @@
 /* Pulgar de la barra de desplazamiento */
 ::-webkit-scrollbar-thumb {
     background-color: var(--color_fuente_2); /* Color del pulgar */
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 5px; 
 }
 
 /* Estilo cuando se pasa el cursor sobre el pulgar */
@@ -102,7 +101,6 @@
     margin-right: 10px;
     transition: 0.3s ease-in-out;
     padding: 5px;
-
 }
 
 .icono_idiomas.scrolled {
@@ -160,10 +158,8 @@
   
 .cabecera {
     background-color: var(--color_principal_1);
-    /*background: url(imagenes/fondo_nebulosa.mp4);*/
     display: flex;
     flex-direction: column;
-    
 }
 
 .nombre {
@@ -222,9 +218,9 @@
 
 .mano-saludo {
     position: absolute;
-    top: 230px;
-    left: 150px;
-    font-size: 130px;
+    top: 30vh;
+    left: 13vw;
+    font-size: 9em;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -234,7 +230,7 @@
 }
 
 .saludo:hover .nombre__presentacion {
-    transform: translateX(100px);
+    transform: translateX(0.5vw);
 }
 
 /******** MENU *******/
@@ -253,7 +249,7 @@
 }
 
 .menu__menu {
-    position: sticky; /* Solucionar esto */
+    position: sticky;
     align-self: flex-start;
     text-transform: uppercase;
     font-family: var(--fuente_2), var(--fuente_3);
@@ -291,10 +287,6 @@
 }
 
 /* Agregar una bandera de argentina cuando pase por encima del texto */
-
-.sobre_mi__caja {
-    /*width: 500px;*/
-}
 
 .bandera_arg {
     position: relative;
@@ -339,8 +331,8 @@
 }
 
 .mate:hover + .texto_a_mover {
-    padding-left: 20px; /* Ajusta el valor según lo desees */
-    transition: all 0.5s ease-in-out; /* Agrega una transición suave */
+    padding-left: 20px; 
+    transition: all 0.5s ease-in-out;
 }
 
 .descargar_cv {
@@ -367,6 +359,7 @@
 .idiomas__idioma {
     text-align: center;
     transition: 0.3s ease-in-out all;
+    padding: 0.5em ;
 }
 
 .idiomas__idioma:hover {  
@@ -385,10 +378,6 @@
     margin: 1em;
 }
 
-.español:hover {
-
-}
-
 .cui {
     height: 50px;
     width: 200px;
@@ -403,8 +392,7 @@
 .proyectos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    
+    justify-content: space-between;   
 }
 
 .oculto {
@@ -532,15 +520,15 @@
 
 .flotante {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 2.5em;
+    right: 1em;
     width: 40px;
     height: 40px;
     background-color: var(--color_principal_1);
     color: var(--color_fuente_1);   
     text-align: center;
     line-height: 40px;
-    font-size: 24px;
+    font-size: 2em;
     border-radius: 50%;
     cursor: pointer;
     text-decoration: none;
