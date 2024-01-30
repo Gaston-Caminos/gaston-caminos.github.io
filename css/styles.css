@@ -595,6 +595,13 @@
 
 /*********************************** RESPONSIVIDAD **********************************/
 
+@media only screen and (max-width: 767px) {
+    /* Oculta la div "cui" en pantallas más pequeñas */
+    .cui {
+      display: none;
+    }
+}
+  
 
 /*********************************** ANIMACIONES ************************************/
 
