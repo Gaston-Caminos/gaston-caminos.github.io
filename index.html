@@ -63,16 +63,24 @@
         <section id="sobre_mi">
             <h2 class="sobre_mi__titulo titulo negrita" data-translate="sobre_mi">Sobre mí</h2>
                 <p class="sobre_mi__descripcion justificado descripcion" data-translate="sobre_mi__descripcion">
-                    Te invito a ver este breve video en el que comento quién soy y qué es lo que me apasiona de la ingeniería de sonido, luego podróas seguir navegando en mi portafolio:
+                    Te invito a ver este breve video en el que comento quién soy y qué es lo que me apasiona de la ingeniería de sonido, luego podrás seguir navegando en mi portafolio:
                 </p>    
                 <center>
-                    <video class="mi_video" src="Presentacion.mp4" controls autoplay width="60%"></video>
+                    <div class="video_container">
+                        <video class="mi_video" controls autoplay width="60%">
+                            <source src="Presentacion.mp4" type="video/mp4">
+                            <track src="subtitulos_es.vtt" kind="subtitles" srclang="es" label="Español" default>
+                            <track src="subtitulos_en.vtt" kind="subtitles" srclang="en" label="English">
+                            <track src="subtitulos_de.vtt" kind="subtitles" srclang="de" label="Deutsch">
+                            Tu navegador no soporta el elemento de <code>video</code>.
+                        </video>
+                    </div>
                 </center>
             
             <div class="sobre_mi__caja">
                 <p class="sobre_mi__descripcion justificado descripcion" data-translate="sobre_mi__descripcion">
                     <br>
-                    Mi nombre es Gastón Gabriel Caminos, tengo <span id="edad"></span> años y soy de nacionalidad <span class="bandera_arg">argentina</span>; nací en Buenos Aires un viernes 2 de octubre de 1998 en la localidad de San Miguel. <br> <!-- Agregar un emoji de una bandera de Argentina cuando pasa el cursor por encima-->
+                    Mi nombre es Gastón Gabriel Caminos, tengo <span id="edad"></span> años y soy de nacionalidad <span class="bandera_arg">argentina</span>; nací en <a href="https://www.google.com.ar/maps/place/Provincia+de+Buenos+Aires/@-37.0234398,-65.3153757,6z/data=!3m1!4b1!4m15!1m8!3m7!1s0x95bcca3d05457fbb:0xe160f4fce7f7c017!2sCdad.+Aut%C3%B3noma+de+Buenos+Aires!3b1!8m2!3d-34.6143048!4d-58.4401655!16s%2Fg%2F1tw_pfss!3m5!1s0x95edbcb7595281d9:0x4ad309fcdcf0a144!8m2!3d-37.2017285!4d-59.8410697!16zL20vMDFseThk?entry=ttu" target="_blank">Buenos Aires</a> un viernes 2 de octubre de 1998 en la localidad de San Miguel. <br> <!-- Agregar un emoji de una bandera de Argentina cuando pasa el cursor por encima-->
                     Soy estudiante de ingeniería en sonido, me encanta la acústica y la programación y trabajo ambas ramas en conjunto buscando una fusión que me permita encontrar formas innovadoras de resolver problemas y crear soluciones efectivas. <br>
                     Además de la esfera técnica, encuentro una profunda conexión con el arte. Más precisamente con la música. Encuentro su magia en las cuerdas de una guitarra que toco con cariño, y en las notas que brotan al cantar con el corazón; este arte se convierte en una manifestación de la tradición transmitida a lo largo de generaciones, arraigándome en la pasión que mi padre y mi abuelo compartieron. 
                     También me sumerjo y disfruto del séptimo arte, disfruto de las reuniones en Familia, momentos donde compartimos risas, historias y afecto. Además me encanta disfrutar la belleza del paisaje en los paseos, bajo el sol radiante o los días nublados, y todo se complementa con un cálido <span class="mate">mate</span> <span class="texto_a_mover">en la mano</span>. <br>
@@ -88,7 +96,7 @@
 
         <section id="educacion">
             <h2 class="educacion__titulo titulo negrita">Educación</h2>
-            <p class="educacion__descripcion justificado descripcion">Tengo formación académica en la rama de la ingeniería. Soy estudiante avanzado de <a class="link_carrera" href="http://www.untref.edu.ar/carrera/ingenieria-de-sonido" target="_blank">ingeniería en sonido</a>; carrera en la cual llevo hechas 38 de 44 materias (soy un 86 % ingeniero 😄) <br>
+            <p class="educacion__descripcion justificado descripcion">Tengo formación académica en la rama de la ingeniería. Soy estudiante avanzado de <a class="link_carrera" href="http://www.untref.edu.ar/carrera/ingenieria-de-sonido" target="_blank">ingeniería en sonido</a>; carrera en la cual llevo hechas 42 de 44 materias (soy un 95 % ingeniero 😄) <br>
             Mi recorrido en la ingeniería abarca un espectro emocionante de disciplinas. Exploré desde el diseño acústico y el control de ruido hasta el análisis de vibraciones y la electroacústica. Mis habilidades incluyen la creación de entornos sonoros inmersivos, el modelado matemático para resolver problemas acústicos y la producción de audio. En resumen, soy un apasionado de fusionar la ciencia del sonido con la creatividad para crear experiencias auditivas excepcionales.  
             </p>
             <h3 class="educacion__subtitulo subtitulo">Lenguajes en los que me comunico</h3>
@@ -146,7 +154,7 @@
                 <div class="proyecto">
                     <h4 class="proyecto__titulo negrita" data-translate="proyecto_2">Desarrollo de software para el procesamiento de Respuestas al Impulso de un Recinto (RIRs)</h4>
                     <img class="proyecto__imagen" src="imagenes/proyecto_software_for_rirs.PNG" alt="Proyecto 2">
-                    <p class="proyecto__descripcion descripcion justificado">Este estudio presenta una implementación de software de procesamiento de <b>respuesta al impulso</b> de un reciento desarrollado en <b>Python</b>. El software está diseñado para ser <b>fácil de usar</b>, especialmente para usuarios con poca o ninguna experiencia en programación. El programa desarrollado es capaz de obtener parámetros de habitación como RT20, RT30, EDT, Tt, EDTt, C50, C80 e IACC a partir de una medición de respuesta de habitación de barrido de seno logarítmico. Los resultados se compararon con el software popular Aurora Acoustical Parameters y se concluyó que <b>el software desarrollado es confiable</b>, revelando una diferencia que no supera el 5% en el cálculo de los parámetros temporales dentro de las bandas de frecuencia válidas.
+                    <p class="proyecto__descripcion descripcion justificado">Este estudio presenta una implementación de software de procesamiento de <b>respuesta al impulso</b> de un recinto desarrollado en <b>Python</b>. El software está diseñado para ser <b>fácil de usar</b>, especialmente para usuarios con poca o ninguna experiencia en programación. El programa desarrollado es capaz de obtener parámetros de habitación como RT20, RT30, EDT, Tt, EDTt, C50, C80 e IACC a partir de una medición de respuesta de habitación de barrido de seno logarítmico. Los resultados se compararon con el software popular Aurora Acoustical Parameters y se concluyó que <b>el software desarrollado es confiable</b>, revelando una diferencia que no supera el 5% en el cálculo de los parámetros temporales dentro de las bandas de frecuencia válidas.
                     </p>
                     <a class="proyecto__boton boton link" href="https://drive.google.com/file/d/1VMuTqjZa3uUgOrMdHR8R7zu2y14eNvNT/view?usp=sharing" target="_blank">Ver más</a>
                 </div>
