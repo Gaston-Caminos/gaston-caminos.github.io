@@ -46,6 +46,19 @@ saludoEmoji.addEventListener('mouseover', function() {
 saludoEmoji.addEventListener('mouseout', function() {
     saludoEmoji.style.animation = 'none';
 });
+// == MENU HAMBURGUESA =======
+
+const toggleButton = document.querySelector('.menu__toggle');
+const menu = document.querySelector('.menu__menu');
+
+toggleButton.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+document.querySelectorAll('.menu__link').forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('active');
+  });
+});
 
 // == CÁLCULO DE LA EDAD EN LA SECCIÓN "SOBRE MÍ" ==
 /**
@@ -215,45 +228,432 @@ mostrarFraseAleatoria();
 
 // == LISTA DESPLEGABLE PARA VER MÁS PROYECTOS ==
 
+document.addEventListener("DOMContentLoaded", () => {
+  const gridItems = document.querySelectorAll(".grid-item:not(.grid-item--cta)");
+  const modal = document.getElementById("modal-proyectos");
+  const modalTitle = document.getElementById("modal-title");
+  const modalDescription = document.getElementById("modal-description");
+  const modalLink = document.getElementById("modal-link");
+  const modalClose = document.querySelector(".modal-close");
+  const modalImage = document.getElementById("modal-image");
 
-const verMasBtn = document.getElementById('mas_proyectos');
-const proyectosAdicionales = document.getElementById('proyectos_adicionales');
+  // Abrir modal al hacer clic en un proyecto
+  gridItems.forEach(item => {
+    item.addEventListener("click", () => {
+      const title = item.getAttribute("data-title");
+      const description = item.getAttribute("data-description");
+      const link = item.getAttribute("data-link");
 
-verMasBtn.addEventListener("click", () => {
-    proyectosAdicionales.classList.toggle("oculto");
-    if (langValue === "es"){
-        if (proyectosAdicionales.classList.contains("oculto")) {
-            verMasBtn.textContent = "Ver más proyectos";
-        } else {
-            verMasBtn.textContent = "Ver menos proyectos";
-            
-        }
-    } else if (langValue === "en") {
-        if (proyectosAdicionales.classList.contains("oculto")) {
-            verMasBtn.textContent = "See more projects";
-        } else {
-            verMasBtn.textContent = "See less projects";
-            
-        }
+      item.addEventListener("click", () => {
+        /*modalImage.src = item.querySelector("img").src; // copia la imagen clickeada*/
+        const nuevaImagen = item.querySelector("img").src;
+        const tempImg = new Image();
+        tempImg.src = nuevaImagen;
+        tempImg.onload = () => {
+        modalImage.src = nuevaImagen;
+        };
+
+        modalTitle.textContent = item.getAttribute("data-title");
+        modalDescription.textContent = item.getAttribute("data-description");
+        modalLink.href = item.getAttribute("data-link");
+        modal.classList.remove("oculto");
+        });
+      modalTitle.textContent = title;
+      modalDescription.textContent = description;
+
+      // Botón con estilo tipo ResearchGate
+      modalLink.textContent = "Ver en ResearchGate";
+      modalLink.href = link;
+
+      modal.classList.remove("oculto");
+      document.body.classList.add('no-scroll');
+    });
+  });
+
+  // Cerrar modal al hacer clic en la X
+  modalClose.addEventListener("click", () => {
+    modal.classList.add("oculto");
+    document.body.classList.remove('no-scroll');
+  });
+
+  // Cerrar modal si se hace clic fuera del contenido
+  modal.addEventListener("click", e => {
+    if (e.target === modal) {
+      modal.classList.add("oculto");
+      document.body.classList.remove('no-scroll');
+    }
+  });
+
+  // Cerrar modal con tecla ESC
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+      modal.classList.add("oculto");
+      document.body.classList.remove('no-scroll');
+    }
+  });
+}); 
+
+
+// ================================================================================ BOTON VER MAS PROYECTOS =====================================================================
+const toggleBtn = document.getElementById('toggle-proyectos');
+const gridProyectos = document.getElementById('grid-proyectos');
+
+toggleBtn.addEventListener('click', () => {
+    const expanded = gridProyectos.classList.toggle('expandido');
+    if (expanded) {
+        toggleBtn.textContent = "Ver menos proyectos";
     } else {
-
+        toggleBtn.textContent = "Ver más proyectos";
+        // hacer scroll hacia arriba para que el usuario vea la primera fila
+        gridProyectos.scrollIntoView({ behavior: 'smooth' });
     }
 });
+
+
+// == CARRUSEL == 
+function setupCarouselCircular(carouselId, interval = 3000) {
+  const carousel = document.getElementById(carouselId);
+  const track = carousel.querySelector('.carousel-track');
+  let slides = Array.from(track.children);
+  const prevButton = carousel.querySelector('.prev-btn');
+  const nextButton = carousel.querySelector('.next-btn');
+
+  const slideWidth = slides[0].getBoundingClientRect().width + 20; // ancho + margen
+
+  // Calcular cuántas slides se ven en pantalla (aprox)
+  const containerWidth = carousel.querySelector('.carousel-track-container').offsetWidth;
+  const visibleSlidesCount = Math.round(containerWidth / slideWidth);
+
+  // Clonar slides para loop infinito
+  const clonesBefore = slides.slice(-visibleSlidesCount).map(slide => slide.cloneNode(true));
+  const clonesAfter = slides.slice(0, visibleSlidesCount).map(slide => slide.cloneNode(true));
+
+  clonesBefore.forEach(clone => {
+    clone.classList.add('clone');
+    track.insertBefore(clone, track.firstChild);
+  });
+
+  clonesAfter.forEach(clone => {
+    clone.classList.add('clone');
+    track.appendChild(clone);
+  });
+
+  // Actualizar lista de slides con clones
+  slides = Array.from(track.children);
+
+  /*********************************************************** */
+  // Variables para modal
+  const modalImgImg = document.getElementById('modal-img');
+  const modalImgContent = document.getElementById('modal-img-content');
+  const modalImgDescription = document.getElementById('modal-img-description');
+  const modalImgClose = document.getElementById('modal-img-close');
+  const modalPrev = document.getElementById('modal-prev');
+  const modalNext = document.getElementById('modal-next');
+
+  let modalCurrentIndex = null;
+
+  // Abrir modal al click en slide
+  slides.forEach((slide, index) => {
+  slide.addEventListener('click', () => {
+  if (slide.classList.contains('clone')) return;
+        modalCurrentIndex = index;
+        showModalImage(modalCurrentIndex);
+    });
+    });
+
+    function showModalImage(index) {
+    const slide = slides[index];
+    const img = slide.querySelector('img');
+    modalImgContent.src = img.src;
+    modalImgContent.alt = img.alt;
+    modalImgDescription.textContent = img.getAttribute("data-description");
+    modalImgImg.classList.remove('oculto');
+    document.body.classList.add('no-scroll');
+    updateCenterClass();
+    }
+
+    modalPrev.addEventListener('click', () => {
+    if (modalCurrentIndex === null) return;
+    modalCurrentIndex = (modalCurrentIndex - 1 + slides.length) % slides.length;
+    while (slides[modalCurrentIndex].classList.contains('clone')) {
+        modalCurrentIndex = (modalCurrentIndex - 1 + slides.length) % slides.length;
+    }
+    showModalImage(modalCurrentIndex);
+    });
+
+    modalNext.addEventListener('click', () => {
+    if (modalCurrentIndex === null) return;
+    modalCurrentIndex = (modalCurrentIndex + 1) % slides.length;
+    while (slides[modalCurrentIndex].classList.contains('clone')) {
+        modalCurrentIndex = (modalCurrentIndex + 1) % slides.length;
+    }
+    showModalImage(modalCurrentIndex);
+    });
+
+    document.addEventListener('keydown', (e) => {
+    if (modal.classList.contains('oculto')) return; // Si modal cerrado, no hacer nada
+
+    if (e.key === 'ArrowLeft') {
+        // Navegar a imagen anterior
+        modalCurrentIndex = (modalCurrentIndex - 1 + slides.length) % slides.length;
+        while (slides[modalCurrentIndex].classList.contains('clone')) {
+        modalCurrentIndex = (modalCurrentIndex - 1 + slides.length) % slides.length;
+        }
+        showModalImage(modalCurrentIndex);
+    } else if (e.key === 'ArrowRight') {
+        // Navegar a imagen siguiente
+        modalCurrentIndex = (modalCurrentIndex + 1) % slides.length;
+        while (slides[modalCurrentIndex].classList.contains('clone')) {
+        modalCurrentIndex = (modalCurrentIndex + 1) % slides.length;
+        }
+        showModalImage(modalCurrentIndex);
+    }
+    });
+
+    /**************************************************************** */
+
+    // Empezar en el primer slide real (después de clonesBefore)
+    let currentIndex = visibleSlidesCount;
+
+    // Posicionar track para mostrar el primer slide real
+    track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+
+    // Función para actualizar clases center
+    function updateCenterClass() {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('center', i === currentIndex);
+        });
+    }
+
+    updateCenterClass();
+
+    let isTransitioning = false;
+
+    function moveToSlide(index) {
+        if (isTransitioning) return;
+        isTransitioning = true;
+
+        track.style.transition = 'transform 0.5s ease-in-out';
+        track.style.transform = `translateX(${-slideWidth * index}px)`;
+        currentIndex = index;
+
+        updateCenterClass();
+    }
+
+    track.addEventListener('transitionend', () => {
+        isTransitioning = false;
+        // Si estoy en clones, saltar sin animación al slide real correspondiente
+        if (currentIndex >= slides.length - visibleSlidesCount) {
+            // Llegamos al clon después del último slide real
+            track.style.transition = 'none';
+            currentIndex = visibleSlidesCount;
+            track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+            updateCenterClass();
+        } else if (currentIndex < visibleSlidesCount) {
+            // Llegamos al clon antes del primer slide real
+            track.style.transition = 'none';
+            currentIndex = slides.length - visibleSlidesCount * 2;
+            track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+            updateCenterClass();
+        }
+    });
+
+    prevButton.addEventListener('click', () => {
+        moveToSlide(currentIndex - 1);
+        resetAutoSlide();
+    });
+
+    nextButton.addEventListener('click', () => {
+        moveToSlide(currentIndex + 1);
+        resetAutoSlide();
+    });
+
+    // Auto slide
+    let autoSlideInterval = setInterval(() => {
+        moveToSlide(currentIndex + 1);
+    }, interval);
+
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(() => {
+            moveToSlide(currentIndex + 1);
+        }, interval);                                                                         
+    }
+
+    // Click en slide para modal
+    
+    const modal = document.getElementById('modal-img');
+    const modalImg = document.getElementById('modal-img-content');
+    const modalClose = document.getElementById('modal-img-close');
+    const modalDescription = document.getElementById('modal-img-description');
+
+    slides.forEach(slide => {
+        slide.addEventListener('click', () => {
+            if (slide.classList.contains('clone')) return;
+            const img = slide.querySelector('img');
+            modalImg.src = img.src;
+            modalImg.alt = img.alt;
+            modalDescription.textContent = img.getAttribute("data-description");
+            console.log("La descripción es" + modalDescription.textContent);
+            modal.classList.remove('oculto');
+            document.body.classList.add('no-scroll');
+        });
+    });
+
+    modalClose.addEventListener('click', () => {
+        modal.classList.add('oculto');
+        document.body.classList.remove('no-scroll');
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.add('oculto');
+            document.body.classList.remove('no-scroll');
+        }
+    });
+
+    // Cerrar modal con tecla ESC
+    document.addEventListener("keydown", e => {
+        if (e.key === "Escape") {
+        modal.classList.add("oculto");
+        document.body.classList.remove('no-scroll');
+        }
+    });
+
+    // Inicializa
+    updateCenterClass();
+}
+
+setupCarouselCircular('carousel-experiencias', 3000)
+
+// ============ LINEA DE TIEMPO ==================
+const timeline = document.getElementById("timeline");
+
+  let autoScrolling = true;  // controla si el scroll automático está activo
+  let direction = 1;         // 1 = derecha, -1 = izquierda
+
+  // Scroll automático que cambia de dirección al llegar a los bordes
+  function autoScroll() {
+    if (!autoScrolling) return;
+
+    timeline.scrollLeft += direction;
+
+    if (timeline.scrollLeft >= timeline.scrollWidth - timeline.clientWidth) {
+      direction = -1; // cambia a izquierda
+    }
+    if (timeline.scrollLeft <= 0) {
+      direction = 1; // cambia a derecha
+    }
+  }
+  let autoScrollInterval = setInterval(autoScroll, 50);
+
+  // Drag con mouse
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  timeline.addEventListener("mousedown", (e) => {
+    isDown = true;
+    autoScrolling = false; // detener auto scroll
+    startX = e.pageX - timeline.offsetLeft;
+    scrollLeft = timeline.scrollLeft;
+  });
+
+  timeline.addEventListener("mouseleave", () => {
+    isDown = false;
+  });
+
+  timeline.addEventListener("mouseup", () => {
+    isDown = false;
+  });
+
+  timeline.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - timeline.offsetLeft;
+    const walk = (x - startX) * 2; // velocidad drag
+    timeline.scrollLeft = scrollLeft - walk;
+  });
+
+  // Si el usuario hace clic o hover sobre la línea de tiempo → pausa el auto scroll
+  timeline.addEventListener("mouseenter", () => {
+    autoScrolling = false;
+  });
+  timeline.addEventListener("mouseleave", () => {
+    autoScrolling = true;
+  });
+  timeline.addEventListener("click", () => {
+    autoScrolling = false; // el click pausa el scroll automático
+  });
+  timeline.addEventListener("mousedown", (e) => {
+  isDown = true;
+  autoScrolling = false; // detener auto scroll
+  timeline.classList.add("active"); // puño cerrado
+  startX = e.pageX - timeline.offsetLeft;
+  scrollLeft = timeline.scrollLeft;
+});
+
+timeline.addEventListener("mouseup", () => {
+  isDown = false;
+  timeline.classList.remove("active"); // vuelve a puño abierto
+});
+
+timeline.addEventListener("mouseleave", () => {
+  isDown = false;
+  timeline.classList.remove("active");
+});
+
+
+// == VISUALIZAR CERTIFICADOS == //
+// Selección de elementos
+const certificados = document.querySelectorAll(".certificado-item");
+const modalCertificados = document.getElementById("modal-certificados");
+const modalCertificadosImg = document.getElementById("modal-certificados-content");
+const modalCertificadosClose = document.getElementById("modal-certificados-close");
+
+// Click en certificado para abrir modal
+certificados.forEach(cert => {
+    cert.addEventListener("click", () => {
+        const img = cert.querySelector("img");
+        const fullImg = cert.getAttribute("data-img") || img.src; // Usa data-img si existe
+        modalCertificadosImg.src = fullImg;
+        modalCertificadosImg.alt = img.alt;
+        modalCertificados.classList.remove("oculto");
+        document.body.classList.add('no-scroll');
+    });
+});
+
+// Cerrar modal con la X
+modalCertificadosClose.addEventListener("click", () => {
+    modalCertificados.classList.add("oculto");
+    document.body.classList.remove('no-scroll');
+});
+
+// Cerrar modal al hacer click fuera de la imagen
+modalCertificados.addEventListener("click", (e) => {
+    if (e.target === modalCertificados) {
+        modalCertificados.classList.add("oculto");
+        document.body.classList.remove('no-scroll');
+    }
+});
+
+// Cerrar modal con tecla ESC
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        modalCertificados.classList.add("oculto");
+        document.body.classList.remove('no-scroll');
+    }
+});
+
 
 // == BOTÓN PARA VOLVER AL INICIO ==
 
 const botonFlotante = document.querySelector('.flotante');
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 600) {
-    botonFlotante.classList.add('mostrar'); // Agrega la clase 'mostrar'
+  if (window.scrollY > 1200) {
+    botonFlotante.classList.add('mostrar'); // Agrega la clase "mostrar"
   } else {
-    botonFlotante.classList.remove('mostrar'); // Remueve la clase 'mostrar'
+    botonFlotante.classList.remove('mostrar'); // Remueve la clase "mostrar"
   }
 });
-
-
-
-
-
-
