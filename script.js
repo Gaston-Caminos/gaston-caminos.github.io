@@ -239,36 +239,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Abrir modal al hacer clic en un proyecto
   gridItems.forEach(item => {
-    item.addEventListener("click", () => {
-      const title = item.getAttribute("data-title");
-      const description = item.getAttribute("data-description");
-      const link = item.getAttribute("data-link");
+  item.addEventListener("click", () => {
+    const title = item.getAttribute("data-title");
+    const description = item.getAttribute("data-description");
+    const link = item.getAttribute("data-link");
 
-      item.addEventListener("click", () => {
-        /*modalImage.src = item.querySelector("img").src; // copia la imagen clickeada*/
-        const nuevaImagen = item.querySelector("img").src;
-        const tempImg = new Image();
-        tempImg.src = nuevaImagen;
-        tempImg.onload = () => {
-        modalImage.src = nuevaImagen;
-        };
+    const nuevaImagen = item.querySelector("img").src;
+    const tempImg = new Image();
+    tempImg.src = nuevaImagen;
+    tempImg.onload = () => {
+      modalImage.src = nuevaImagen;
+    };
 
-        modalTitle.textContent = item.getAttribute("data-title");
-        modalDescription.textContent = item.getAttribute("data-description");
-        modalLink.href = item.getAttribute("data-link");
-        modal.classList.remove("oculto");
-        });
-      modalTitle.textContent = title;
-      modalDescription.textContent = description;
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
 
-      // Botón con estilo tipo ResearchGate
-      modalLink.textContent = "Ver en ResearchGate";
-      modalLink.href = link;
+    // Botón con estilo tipo ResearchGate
+    modalLink.textContent = "Ver en ResearchGate";
+    modalLink.href = link;
 
-      modal.classList.remove("oculto");
-      document.body.classList.add('no-scroll');
-    });
+    modal.classList.remove("oculto");
+    document.body.classList.add('no-scroll');
   });
+});
+
 
   // Cerrar modal al hacer clic en la X
   modalClose.addEventListener("click", () => {
