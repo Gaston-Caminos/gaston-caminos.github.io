@@ -681,6 +681,7 @@ video::-webkit-media-text-track-display {
     transition: opacity 0.3s ease;
     text-align: center;
     padding: 1em;
+    pointer-events: none;
 }
 
 .overlay h3 {

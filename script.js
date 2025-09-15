@@ -238,8 +238,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalImage = document.getElementById("modal-image");
 
   // Abrir modal al hacer clic en un proyecto
+  
   gridItems.forEach(item => {
-  item.addEventListener("click", () => {
+  item.addEventListener("click", (event) => {
+     
+     console.log("Click en grid-item:", event.currentTarget);
+     console.log("Click en documento:", event.target);
     const title = item.getAttribute("data-title");
     const description = item.getAttribute("data-description");
     const link = item.getAttribute("data-link");
