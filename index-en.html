@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Gastón Caminos - Portfolio</title>
+        <meta name="description" content="Professional portfolio of Gastón Caminos, sound engineer specialized in architectural and environmental acoustics, sound design, and vibro-acoustic measurements in Argentina.">
+        <meta name="keywords" content="sound engineer, acoustics, sound design, acoustic measurements, portfolio, Argentina, engineering, audio, noise, vibration">
+
+        <meta property="og:title" content="Gastón Caminos - Sound Engineer">
+        <meta property="og:description" content="Specialist in acoustics, sound design, and acoustic measurements. Professional portfolio.">
+        <meta property="og:image" content="https://gaston-caminos.github.io/imagenes/Foto_con_fondo_anaranjado.png">
+        <meta property="og:url" content="https://gaston-caminos.github.io/">
+
+        <title>Gastón Caminos - Sound Engineer | Beluga, Acoustic Engineering</title>
+
+
         <link rel="icon" href="imagenes/sound-wave.png" type="image/x-icon">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -20,273 +30,521 @@
         <script src="script.js" defer></script>
     </head>
     <body>
+        
         <header class="cabecera" id="cabecera">
 
             <div class="language_selector">
                 <div class="icono_idiomas">
-                    <iconify-icon icon="clarity:language-line"></iconify-icon> 
+                    <iconify-icon icon="clarity:language-line"></iconify-icon>
                 </div>
                 <ul class="language-list">
                     <li><a href="index-en.html"class="link_idioma"><span class="flag-icon flag-icon-gb"></span> <span class="flag-label">English</span></a></li>
-                  <li><a href="index.html"class="link_idioma"><span class="flag-icon flag-icon-es"></span> <span class="flag-label">Spanish</span></a></li>
-                  <li><a href="index-de.html" class="link_idioma"><span class="flag-icon flag-icon-de"></span> <span class="flag-label">German</span></a></li>
+                    <li><a href="index.html"class="link_idioma"><span class="flag-icon flag-icon-es"></span> <span class="flag-label">Spanish</span></a></li>
+                    <li><a href="index-de.html" class="link_idioma"><span class="flag-icon flag-icon-de"></span> <span class="flag-label">German</span></a></li>
                 </ul>
             </div>
                             
               
             <div class="nombre">
                 <div class="saludo">
-                    <p class="nombre__presentacion text-center">Hi! My name is <span class="nombre_destacado">Gastón Caminos</span>.</p>
+                    <h1 class="sr-only">Gastón Caminos - Sound engineer specialized in architectural and environmental acoustics and vibration analysis</h1>
+                    <p class="nombre__presentacion text-center">Hello! My name is <span class="nombre_destacado">Gastón G. Caminos</span>,</p>
                     <span class="emoji mano-saludo">👋</span>
                 </div>
-                <p class="nombre__subtitulo text-center">I am an advanced Sound Engineering student.</p> 
+                <p class="nombre__subtitulo text-center">I am a sound engineer.</p>
                 <div id="fraseAleatoria" class="cursiva"></div>
-                <div class="iniciar"><a class="boton__enlace" href="#menu"><button class="iniciar__boton">Get to know me better</button></a></div>
+                <div class="iniciar">
+                    <a class="boton__enlace" href="#sobre_mi">
+                        <button class="iniciar__boton">Get to know me better</button>
+                    </a>
+                </div>
             </div>
+
         </header>
+    
 
         <div class="menu">
+            <button class="menu__toggle" aria-label="Abrir menú">&#9776;</button>
             <nav class="menu__menu" id="menu">
                 <ul class="menu__lista">
                     <li class="menu__item"><a href="#cabecera" class="menu__link" data-translate="inicio">Home</a></li>
                     <li class="menu__item"><a href="#sobre_mi" class="menu__link" data-translate="sobre_mi">About me</a></li>
-                    <li class="menu__item"><a href="#educacion" class="menu__link" data-translate="educacion">Education</a></li>
                     <li class="menu__item"><a href="#portfolio" class="menu__link" data-translate="portafolio">Portfolio</a></li>
+                    <li class="menu__item"><a href="#educacion" class="menu__link" data-translate="educacion">Education</a></li>
                     <li class="menu__item"><a href="#certificaciones" class="menu__link" data-translate="certificaciones">Certifications</a></li>
                     <li class="menu__item"><a href="#contacto" class="menu__link" data-translate="contacto">Contact</a></li>
                 </ul>
-            </nav>
+            </nav> 
         </div>
 
         <section id="sobre_mi">
             <h2 class="sobre_mi__titulo titulo negrita" data-translate="sobre_mi">About me</h2>
             <p class="sobre_mi__descripcion justificado descripcion" data-translate="sobre_mi__descripcion">
-                I invite you to watch this short video where I talk about who I am and what I am passionate about in sound engineering, and then you can continue browsing my portfolio:
+                I invite you to watch this short video where I talk about who I am and what excites me about sound engineering, then you can continue exploring my portfolio:
             </p>    
             <center>
                 <div class="video_container">
                     <video class="mi_video" controls autoplay width="60%">
-                        <source src="Presentacion.mp4" type="video/mp4">
-                        <track src="subtitulos_en.vtt" kind="subtitles" srclang="en" label="English" default>
-                        <track src="subtitulos_es.vtt" kind="subtitles" srclang="es" label="Español">
-                        <track src="subtitulos_de.vtt" kind="subtitles" srclang="de" label="Deutsch">
+                        <source src="video/Presentacion.mp4" type="video/mp4">
+                        <track src="video/subtitulos_en.vtt" kind="subtitles" srclang="es" label="English" default>
+                        <track src="video/subtitulos_en.vtt" kind="subtitles" srclang="en" label="Spanish">
+                        <track src="video/subtitulos_de.vtt" kind="subtitles" srclang="de" label="German">
                         Your browser does not support the <code>video</code> element.
                     </video>
                 </div>
             </center>
+
             <div class="sobre_mi__caja">
                 <p class="sobre_mi__descripcion justificado descripcion" data-translate="sobre_mi__descripcion">
-                    My name is Gastón Gabriel Caminos, I am <span id="edad"></span> years old and I am of Argentine nationality; I was born in <a href="https://www.google.com.ar/maps/place/Provincia+de+Buenos+Aires/@-37.0234398,-65.3153757,6z/data=!3m1!4b1!4m15!1m8!3m7!1s0x95bcca3d05457fbb:0xe160f4fce7f7c017!2sCdad.+Aut%C3%B3noma+de+Buenos+Aires!3b1!8m2!3d-34.6143048!4d-58.4401655!16s%2Fg%2F1tw_pfss!3m5!1s0x95edbcb7595281d9:0x4ad309fcdcf0a144!8m2!3d-37.2017285!4d-59.8410697!16zL20vMDFseThk?entry=ttu" target="_blank">Buenos Aires</a> on Friday, October 2, 1998, in San Miguel.
-                    I am a sound engineering student, I love acoustics and programming, and I work both fields together seeking a fusion that allows me to find innovative ways to solve problems and create effective solutions.
-                    In addition to the technical sphere, I find a deep connection with art. More precisely with music. I find its magic in the strings of a guitar that I play with affection, and in the notes that come out when singing with my heart; this art becomes a manifestation of the tradition transmitted over generations, rooting me in the passion that my father and grandfather shared.
-                    I also immerse myself and enjoy the seventh art, I enjoy Family gatherings, moments where we share laughter, stories, and affection. Additionally, I love to enjoy the beauty of the landscape on walks, under the radiant sun or cloudy days, and everything is complemented with a warm <span class="mate"><a href="https://en.wikipedia.org/wiki/Mate_(drink)"><em>mate</em></a></span> <span class="texto_a_mover">in hand</span>.
-                    In my work experience, I have actively applied the knowledge acquired during my career. I have worked as a radio assistant technician on a program hosted by my father, participated in the assembly of live sound systems for bands, and performed acoustic measurements to evaluate multi-use spaces. If you want to know more details about my education and experience, I invite you to download my CV so you can see it. Additionally, I invite you to keep exploring my page for additional information.</p>
-
-                <div class="descargar_cv"><a href="https://drive.google.com/file/d/1H184-m8MPLSGVIhbX53DiUFu8qS11nBp/view?usp=sharing" target="_blank" download><i class="fas fa-file-alt logo_cv"></i> Download CV.
-                </a></div>
-                
+                    <br>
+                    Hello! I'm Gastón Gabriel Caminos, an Argentinian sound engineer born in San Miguel, <a href="https://www.google.com.ar/maps/place/Provincia+de+Buenos+Aires/@-37.0234398,-65.3153757,6z/data=!3m1!4b1!4m15!1m8!3m7!1s0x95bcca3d05457fbb:0xe160f4fce7f7c017!2sCdad.+Aut%C3%B3noma+de+Buenos+Aires!3b1!8m2!3d-34.6143048!4d-58.4401655!16s%2Fg%2F1tw_pfss!3m5!1s0x95edbcb7595281d9:0x4ad309fcdcf0a144!8m2!3d-37.2017285!4d-59.8410697!16zL20vMDFseThk?entry=ttu" target="_blank">Buenos Aires</a>. At <span id="edad"></span> years old, my career bridges the deep science of acoustics with the transformative power of programming. I am passionate about merging these disciplines to develop innovative and effective solutions in the field of sound.<br>
+                    <strong>My mission:</strong> To find the perfect harmony between technical precision and creativity. Whether optimizing an acoustic space, designing sound systems, or developing digital tools, my goal is to deliver results that not only meet but exceed expectations. <br><br>
+                    Beyond technical rigor, my life resonates with art. Playing the guitar, singing, and immersing myself in cinema are expressions of a passion that, like the tradition of mate and family gatherings, is rooted in my heritage and inspires me to seek beauty in every project.<br><br>
+                    I have actively applied my knowledge in roles such as radio assistant technician, live sound setup, and complex acoustic measurements. Additionally, my experience as an acoustic engineer at <a href="https://knauf.com/es-AR/knauf?gad_source=1&gad_campaignid=20565365405&gbraid=0AAAAAqK3kkkiNpxPmCoWHAm3pX_M-qrC5&gclid=CjwKCAjwq9rFBhAIEiwAGVAZP29qgxTR3pCar9G_uhlQ3wBcX96YGr5W-i1g9yRiRLuM5UpXgg7-3hoCdb8QAvD_BwE" target="_blank">Knauf Argentina</a> and as an applied mathematician training AI models at <a href="https://invisibletech.ai/" target="_blank">Invisible Technologies</a> and <a href="https://outlier.ai/" target="_blank">Outlier AI</a> has provided me with valuable insights at the intersection of technology and industry.<br><br>
+                    I invite you to explore my portfolio to see my projects in detail and discover how my passion for sound and technology can add value to your challenges.
+                </p>
             </div>
-
         </section>
 
-        <section id="educacion">
-            <h2 class="educacion__titulo titulo negrita">Education</h2>
-            <p class="educacion__descripcion justificado descripcion">I have academic training in the field of engineering. I am an advanced student of <a class="link_carrera" href="http://www.untref.edu.ar/carrera/ingenieria-de-sonido" target="_blank">sound engineering</a>; a career in which I have completed 42 out of 44 subjects (I am 95% an engineer 😄).
-            My journey in engineering covers an exciting spectrum of disciplines. I have explored everything from acoustic design and noise control to vibration analysis and electroacoustics. My skills include creating immersive sound environments, mathematical modeling to solve acoustic problems, and audio production. In summary, I am passionate about merging the science of sound with creativity to create exceptional listening experiences. 
+        
+        <section id="portfolio">
+            <h2 class="portfolio__titulo titulo negrita">Portfolio</h2>
+            <p class="portfolio__descripcion justificado descripcion">
+                I invite you to explore a selection of projects I worked on both during my university studies and personally. These projects cover a wide range of areas, from acoustics to digital signal processing and applied electronics. If any of these descriptions catch your interest, don’t hesitate to click on the image to access the full document!
             </p>
-            <h3 class="educacion__subtitulo subtitulo">Languages in which I communicate</h3>
-            <div id="fraseIdioma" class="descripcion cursiva">  </div>
 
-            
-            <div class="idiomas">
-                <div class="banderas">
-                    <div class="idiomas__idioma">
-                        <img src="imagenes/es.png" alt="Spanish flag" class="bandera español">
-                        <p class="idiomas__descripcion">Spanish native</p>
-                    </div>
-                    <div class="idiomas__idioma">
-                        <img src="imagenes/gb.png" alt="English flag" class="bandera ingles">
-                        <p class="idiomas__descripcion">English level C1</p>
-                    </div>
-                    <div class="idiomas__idioma">
-                        <img src="imagenes/ger.png" alt="German flag" class="bandera aleman">
-                        <p class="idiomas__descripcion">German level B2</p>
+            <div class="grid-container" id="grid-proyectos">
+                <div class="grid-item" data-title="Home Cinema design with Dolby Atmos system" data-description="Comprehensive design project for a home cinema system with Dolby Atmos technology, including acoustic isolation, conditioning, ventilation, electrical safety, and compliance with current regulations. The result provides an immersive 3D sound experience, applying international and national acoustical engineering standards." data-link="https://www.researchgate.net/profile/Gaston-Caminos">
+                    <img src="imagenes/Proyectos/Diseño_home_cinema_1.png" alt="Home Cinema design with Dolby Atmos system">
+                    <div class="overlay">
+                        <h3>Home Cinema design with <strong>Dolby Atmos</strong> audio system</h3>
                     </div>
                 </div>
-                <div class="cui">
-                    <a href="https://cui.edu.ar/" target="_blank"><img src="imagenes/cui.png" alt="Centro Universitario de Idiomas - CUI" class="cui"></a>
+                <div class="grid-item" data-title="Tube preamplifier for guitar with harmonic generator" data-description="Development of a tube preamplifier capable of generating harmonics, incorporating distortion both via tubes and silicon diodes. The system allows passive mixing of both stages, offering a versatile design for musical applications." data-link="https://www.researchgate.net/publication/395379202_Preampilficador_valvular_para_guitarra_con_generador_armonico?_sg%5B0%5D=f-uRTUwxgpIZf6m2ns8iMw1qEqVrcRruuHWbCSuirXH8EbHA5siGRbPmkFXJyAy1qMD1tRskViT-8-OBh8guAsOBivR2cFRamFNpk1nl.oaw4hG8mkHXSVbJTHSNWye9_bLajKVJrIc_nIYSjwXwiSYacGTLwCI1o7z1iqJoVdsOWNmSuzdblqikZNgPI8A&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoicHJvZmlsZSIsInBvc2l0aW9uIjoicGFnZUNvbnRlbnQifX0">
+                    <img src="imagenes/Proyectos/Amplificador_valvular.png" alt="Tube preamplifier for guitar with harmonic generator">
+                    <div class="overlay">
+                        <h3>Tube <strong>preamplifier</strong> for guitar with <strong>harmonic generator</strong></h3>
+                    </div>
+                </div>
+                <div class="grid-item" data-title="Software development for impulse response processing" data-description="Implementation of Python software to calculate acoustic parameters from impulse responses. Designed to be accessible to users without programming experience, demonstrating reliable accuracy, with differences under 5% compared to reference programs." data-link="researchgate.net/publication/395380124_Software_development_for_RIRs_processing?_sg%5B0%5D=-CPs1PNH4mUG0Epy8vTfaeOhFkJAlkwRQ6t0R5aLhZcEH1WGPuYmJm9IA2W_Oy8-gbAosKQ1oXHAAevFEbOvZL503dKCjhD2ehsOdF5L.tAliBmkJdW3B6uwpcw27eOMzuZO0MiVpzcFT4uSsAVjxN2nU_jJj_9FL8M5dYk6aZRURwZWXtbjosdXmUIeZ8g&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoicHJvZmlsZSIsInBvc2l0aW9uIjoicGFnZUNvbnRlbnQifX0">
+                    <img src="imagenes/Proyectos/Rirs_processing.png" alt="Impulse response processing software">
+                    <div class="overlay">
+                        <h3>Development of <strong>software</strong> for <strong>impulse response processing</strong></h3>
+                    </div>
+                </div>
+                <div class="grid-item" data-title="Acoustical parameters study of the Regio Theater" data-description="Technical report of acoustic measurements in the Regio Theater of Buenos Aires, conducted using monaural, binaural, and ambisonic systems according to ISO 3382 standards. Key parameters for clarity and intelligibility are presented, with spatial visualizations providing a comprehensive analysis of the venue's acoustic performance." data-link="https://www.researchgate.net/publication/394937535_Acoustical_parameters_of_Regio_Theater?_sg%5B0%5D=So_bRQlGm-4_kPGqt8HdDQVRJEWrBvRccEnG3uxsaKempdB5ya61csUkv_zUIgaVoZP65RwI6DShZhYyLdr93sTyZ_F9A2P35M94fUzG.9lElr5DyAFCXHN36sIjVWy_AkZFOjNI0lztuYRFHEBlNqusYzVu6Qhrk__fr8mXNEhhAwwTR6cjIRZXlKG1XmQ&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoicHJvZmlsZSIsInBvc2l0aW9uIjoicGFnZUNvbnRlbnQifX0">
+                    <img src="imagenes/Proyectos/acoustical_parameters.png" alt="Acoustical parameters study of the Regio Theater">
+                    <div class="overlay">
+                        <h3>Study of <strong>acoustical parameters</strong> of the <strong>Regio Theater</strong></h3>
+                    </div>
+                </div>
+                <div class="grid-item" data-title="Speaker measurements: sensitivity, frequency response, directivity, and Thiele-Small parameters" data-description="Experimental evaluation of a speaker mounted in a cabinet, analyzing sensitivity, frequency response, directivity, impedance, and Thiele-Small parameters. Measurements, conducted in an untreated environment, provide data applicable to real-world usage contexts." data-link="https://www.researchgate.net/publication/395380090_Medicion_de_sensibilidad_respuesta_en_frecuencia_direccionalidad_impedancia_y_parametros_de_Thiele_-_Small_de_un_parlante?_sg%5B0%5D=UBWYPteV8X9bFiAGyRJ3t7YXrvCEQj4y5tpUakc43RnrGaLaIfTfR5mwmGzxy6JGv8drKjL9PHPws5KWFwqdmDu6F-W4qfxa-mGxRbPG.ct7ST_biK2NwzTElKKZ6CkaLETVsPnbgmLsEeHbisbsRF41ypL1_F0QzQmoxTjJMTSjpCOkQwuHF5mCKp9n-rw&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoicHJvZmlsZSIsInBvc2l0aW9uIjoicGFnZUNvbnRlbnQifX0">
+                    <img src="imagenes/Proyectos/direccionalidad.png" alt="Speaker measurements: sensitivity, frequency response, directivity, and Thiele-Small parameters">
+                    <div class="overlay">
+                        <h3>Measurement of <strong>sensitivity</strong>, <strong>frequency response</strong>, <strong>directivity</strong>, and <strong>Thiele-Small parameters</strong> of a speaker</h3>
+                    </div>
+                </div>
+                <div class="grid-item" data-title="Noise exposure of technical staff in live music and sound industry" data-description="Study on noise exposure of sound, lighting, and setup technicians at live events. Based on international standards and WHO recommendations, auditory risk is highlighted and safe practices are suggested to protect workers' hearing health." data-link="https://www.researchgate.net/publication/384691196_Exposicion_al_ruido_del_personal_tecnico_en_la_industria_de_la_musica_y_el_sonido_en_vivo?_sg%5B0%5D=JEnOMZBUnV80yDd9FHscf16G-ul-a0MfVEyl19Q3pAKsaQFuQT25f4wymPjwEW6iNpolK2H5h92vc-sPwlpw8SiQGekXYeqxYnVPdC_0.P8wxZwPICND_qJHnPXDaybLhR1j-iMLE651umNM8uJWSlJdJfoM6uCkzBmNn2Ku6dsYiXO43ESgz7a-UbFjCTw&_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6ImhvbWUiLCJwYWdlIjoicHJvZmlsZSIsInBvc2l0aW9uIjoicGFnZUNvbnRlbnQifX0">
+                    <img src="imagenes/Proyectos/oido.jpg" alt="Noise exposure of technical staff in live music and sound industry">
+                    <div class="overlay">
+                        <h3>Noise <strong>exposure</strong> of technical staff in the <strong>live music</strong> and <strong>sound industry</strong></h3>
+                    </div>
+                </div>
+                <div class="grid-item" data-title="Computer modeling and analysis of a concert hall" data-description="Acoustic modeling and simulation of Arthur Sykes Rymer Auditorium (University of York) in EASE software, validated with in-situ measurements. Results show high consistency in intelligibility, reverberation, and sound pressure parameters, confirming the reliability of the simulation model." data-link="https://www.researchgate.net/publication/395353191_Computer_model_and_analysis_of_a_concert_hall">
+                    <img src="imagenes/Proyectos/York_university.png" alt="Computer modeling and analysis of a concert hall">
+                    <div class="overlay">
+                        <h3><strong>Computer modeling</strong> and analysis of a <strong>concert hall</strong></h3>
+                    </div>
+                </div>
+                <a href="https://www.researchgate.net/profile/Gaston-Caminos" target="_blank" class="grid-item grid-item--cta">
+                    <p><i class="fa-brands fa-researchgate fa-2xl" style="color: #28036a; border-radius: 15px;"></i> See more works on ResearchGate</p>
+                </a>
+
+            </div>
+
+            <div class="contenedor-boton">
+                <button id="toggle-proyectos" class="boton">View more projects</button>
+            </div>
+
+            <!-- Modal to show project info -->
+            <div id="modal-proyectos" class="modal oculto">
+                <div class="modal-content">
+                    <span id="modal-close" class="modal-close">&times;</span>
+                    <img id="modal-image" src="" alt="Project preview" class="modal-image">
+                    <h3 id="modal-title" class="negrita"></h3>
+                    <p id="modal-description"></p>
+                    <a id="modal-link" href="#" target="_blank" class="proyecto__boton boton link">See more</a>
                 </div>
             </div>
         
         </section>
 
-        <section id="portfolio">
+        
+        <section id="fotos-varias">
+            <h3 class="fotos-varias__titulo subtitulo justificado">Photo Gallery</h3>
+            <div class="carousel" id="carousel-experiencias">
+                <button class="carousel-btn prev-btn">&#10094;</button>
+                <div class="carousel-track-container">
+                    <ul class="carousel-track">
+                        <li class="carousel-slide">
+                            <img src="imagenes/Experiencias/charla_fundar_1.jpg" alt="Meeting with Fundar developer" data-description="Meeting with Fundar developer">
+                            <p>Meeting with Fundar developer</p>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="imagenes/Experiencias/charla_fundar_2.jpg" alt="Meeting with Fundar developer" data-description="Meeting with Fundar developer">
+                            <p>Meeting with Fundar developer</p>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="imagenes/Experiencias/charla_obring.jpg" alt="Meeting with Obring architecture studio" data-description="Meeting with Obring architecture studio">
+                            <p>Meeting with Obring architecture studio</p>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="imagenes/Experiencias/charla_milicic.jpeg" alt="Meeting with Milicic S.A. construction company" data-description="Meeting with Milicic S.A. construction company">
+                            <p>Meeting with Milicic S.A. construction company</p>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="imagenes/Experiencias/charla_untref.jpeg" alt="Talk at National University of Tres de Febrero" data-description="Talk at National University of Tres de Febrero">
+                            <p>Talk at National University of Tres de Febrero</p>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="imagenes/Experiencias/charla_untref_2.jpeg" alt="Talk at National University of Tres de Febrero" data-description="Talk at National University of Tres de Febrero">
+                            <p>Talk at National University of Tres de Febrero</p>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="imagenes/Experiencias/charla_untref_3.jpeg" alt="Talk at National University of Tres de Febrero" data-description="Talk at National University of Tres de Febrero">
+                            <p>Talk at National University of Tres de Febrero</p>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="imagenes/Experiencias/charla_knauf.jpg" alt="Training for dry construction workers, Knauf Argentina" data-description="Training for dry construction workers, Knauf Argentina">
+                            <p>Training for dry construction workers, Knauf Argentina</p>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="imagenes/Experiencias/teatro_.jpeg" alt="Live sound, theater in Buenos Aires" data-description="Live sound, theater in Buenos Aires">
+                            <p>Live sound, theater in Buenos Aires</p>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="imagenes/Experiencias/estudio_mosco3.JPG" alt="Recording session at Mosco Records" data-description="Recording session at Mosco Records">
+                            <p>Recording session at Mosco Records</p>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="imagenes/Experiencias/medicion_ruido_de_transito.jpeg" alt="Traffic noise measurement at Av. Gral. Paz (Buenos Aires)" data-description="Traffic noise measurement at Av. Gral. Paz (Buenos Aires)">
+                            <p>Traffic noise measurement at Av. Gral. Paz (Buenos Aires)</p>
+                        </li>
+                        <li class="carousel-slide">
+                            <img src="imagenes/Experiencias/medicion_ruido_de_transito_2.jpeg" alt="Traffic noise measurement at Av. 27 de Febrero (Buenos Aires)" data-description="Traffic noise measurement at Av. 27 de Febrero (Buenos Aires)">
+                            <p>Traffic noise measurement at Av. 27 de Febrero (Buenos Aires)</p>
+                        </li>
+                    </ul>
+                </div>
+                <button class="carousel-btn next-btn">&#10095;</button>
+            </div>
+            <!-- Modal for enlarged image -->
+            <div id="modal-img" class="modal oculto">
+                <div class="modal-img-content">
+                    <button id="modal-prev" class="modal-btn">&#10094;</button>
+                    <span id="modal-img-close" class="modal-close">&times;</span>
+                    <button id="modal-next" class="modal-btn">&#10095;</button>
+                    <img id="modal-img-content" src="" alt="Enlarged image" />
+                    <h3 id="modal-img-description"></h3>
+                </div>
+            </div>
+        </section>
 
+        <!-- Linea de tiempo -->
+        <h3 class="fotos-varias__titulo subtitulo justificado" style="background-color: #EAEAEA;">Experiences</h3>
+        <section class="timeline-container" id="timeline">
             
-            <h2 class="portfolio__titulo titulo negrita">Portfolio</h2>
-            <p class="portfolio__descripcion descripcion">
-                I invite you to see a selection of projects in which I worked both during my university career and personally. These projects cover a wide range of areas, from acoustics to digital signal processing and applied electronics. If any of these descriptions intrigues you, don't hesitate to click on the "See more" button to access the complete document.
-            </p>
-            <div class="proyectos">
-
-                <div class="proyecto">
-                    <h4 class="proyecto__titulo negrita">Computer Model and Analysis of a Concert Hall </h4>
-                    <img class="proyecto__imagen" src="imagenes/proyecto_3d_modeling_of_concert_hall.PNG" alt="Project 1">
-                    <p class="proyecto__descripcion descripcion justificado">This article details the <b>modeling</b> and <b>acoustic simulation</b> carried out in the <b>EASE</b> software of the Arthur Sykes Rymer Auditorium at the University of York in the United Kingdom. The STI, AlCons, RT, Echo Speech, Echo Music, Lateral Fraction, and D/R parameters are calculated and compared with the on-site measurements taken in the theater. In the simulation, a spatial mapping of the audience area is also carried out for the intelligibility, D/R, and direct sound pressure level parameters. With fine-tuning of the simulation model, the <b>results</b> obtained are <b>consistent</b> with the on-site measurements and are considerably similar, with some differences existing at some frequencies.
-                    </p>
-                    <a class="proyecto__boton boton link" href="https://drive.google.com/file/d/1qG7Sy1jDbMJE6bfALB278GBXueRBnjJl/view?usp=sharing" target="_blank">See more</a>
+            <div class="timeline-track">
+                <div class="timeline-item">
+                    <div class="timeline-bubble">
+                        <img src="imagenes/Logos/logo_untref_2.png" alt="UNTREF logo" class="timeline-logo">
+                        <span>2020 - 2022</span>
+                    </div>
+                    <h3 class="timeline-title">Teaching Assistant</h3>
+                    <p class="timeline-desc">UNTREF - Mathematical Analysis</p>
                 </div>
-
-                <div class="proyecto">
-                    <h4 class="proyecto__titulo negrita" data-translate="proyecto_1">Algorithm for phase reconstruction based on the Griffin & Lim algorithm</h4>
-                    <img class="proyecto__imagen" src="imagenes/proyecto.PNG" alt="Prject 2">
-                    <p class="proyecto__descripcion descripcion justificado" data-translate="proyecto_1_descripcion">This report details the processes for designing a <b>phase reconstruction algorithm</b> based on the Griffin-Lim method. It seeks to estimate a time signal from a modified magnitude of the short-time Fourier transform (STFT) given. The algorithm is designed so that in each iteration, the mean squared error between the estimated STFT and the provided modified STFT (MSTFT) decreases. The developed algorithm has been tested with signals of different origins such as musical instruments, spoken voice, and nature sounds; the process has proven to be <b>effective</b> with a <b>minimal computational cost</b>
-                    </p>
-                    <a class="proyecto__boton boton link" href="https://drive.google.com/file/d/1ZqF2KVKG_LCL6_zBwfkoJDha_vlD-4Nq/view?usp=sharing" target="_blank">See more</a>
+                <div class="timeline-item">
+                    <div class="timeline-bubble">
+                        <img src="imagenes/Varias/250_favorite.png" alt="Favorite tutor badge" class="timeline-logo">
+                        <span>2020 - Present</span>
+                    </div>
+                    <h3 class="timeline-title">Calculus Tutor</h3>
+                    <p class="timeline-desc">Tutor.com</p>
                 </div>
-
-                <div class="proyecto">
-                    <h4 class="proyecto__titulo negrita" data-translate="proyecto_2">Software Development for RIRs Processing</h4>
-                    <img class="proyecto__imagen" src="imagenes/proyecto_software_for_rirs.PNG" alt="Proyecto 2">
-                    <p class="proyecto__descripcion descripcion justificado">This study presents a software implementation for processing <b>room impulse response</b> designed in <b>Python</b>. The software is designed to be <b>user-friendly</b>, especially for users with little or no programming experience. The developed program is capable of obtaining room parameters such as RT20, RT30, EDT, Tt, EDTt, C50, C80, and IACC from a logarithmic sine sweep room response measurement. The results were compared with the popular Aurora Acoustical Parameters software, and it was concluded that <b>the developed software is reliable</b>, revealing a difference that does not exceed 5% in the calculation of temporal parameters within the valid frequency bands.
-                    </p>
-                    <a class="proyecto__boton boton link" href="https://drive.google.com/file/d/1VMuTqjZa3uUgOrMdHR8R7zu2y14eNvNT/view?usp=sharing" target="_blank">See more</a>
+                <div class="timeline-item">
+                    <div class="timeline-bubble">
+                        <img src="imagenes/Varias/Sound_level_meter_transparent.png" alt="Sound level meter" class="timeline-logo">
+                        <span>2022 - Present</span>
+                    </div>
+                    <h3 class="timeline-title">Acoustic Consultant</h3>
+                    <p class="timeline-desc">Beluga, Acoustic Engineering</p>
                 </div>
-
-                
+                <div class="timeline-item">
+                    <div class="timeline-bubble">
+                        <img src="imagenes/Varias/Headphones.png" alt="Headphones" class="timeline-logo">
+                        <span>2023 - 2024</span>
+                    </div>
+                    <h3 class="timeline-title">Radio & Streaming Operator</h3>
+                    <p class="timeline-desc">Carpe Diem</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-bubble">
+                        <img src="imagenes/Logos/Logo_Knauf.png" alt="Knauf logo" class="timeline-logo">
+                        <span>2024</span>
+                    </div>
+                    <h3 class="timeline-title">Acoustic Engineer</h3>
+                    <p class="timeline-desc">Knauf Argentina</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-bubble">
+                        <img src="imagenes/Logos/Logo_outlier.png" alt="Outlier AI logo" class="timeline-logo">
+                        <span>2025 - Present</span>
+                    </div>
+                    <h3 class="timeline-title">Applied Mathematician</h3>
+                    <p class="timeline-desc">Outlier AI</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-bubble">
+                        <img src="imagenes/Logos/Logo_invisible.png" alt="Invisible tech logo" class="timeline-logo">
+                        <span>2025 - Present</span>
+                    </div>
+                    <h3 class="timeline-title">STEM Specialist</h3>
+                    <p class="timeline-desc">Invisible Technologies</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-bubble">
+                        <img src="imagenes/Varias/Sound_absorption.png" alt="Sound absorption" class="timeline-logo">
+                        <span>2025 - Present</span>
+                    </div>
+                    <h3 class="timeline-title">Sound Engineer</h3>
+                    <p class="timeline-desc">Impessa Acoustics</p>
+                </div>
             </div>
-
-            <div class="proyectos oculto" id="proyectos_adicionales" >
-                <div class="proyecto">
-                    <h4 class="proyecto__titulo negrita">Design of a one-dimensional numerical diffuser</h4>
-                    <img class="proyecto__imagen" src="imagenes/proyecto_difusor.PNG" alt="Project 4">
-                    <p class="proyecto__descripcion descripcion justificado">In this report, the design of a one-dimensional QRD11 diffuser is carried out to be used in a recording studio located in a neighborhood of Buenos Aires. It is specifically designed to operate in a frequency range of 165 Hz to 745 Hz. For this, the Schroeder method is used, using a period sequence of 11 with an ACQF of 0.18, a cell width of 23 cm, a number of levels equal to 5, and a maximum depth of 50 cm. The <b>AFMG Reflex</b> software is used to verify the theoretical results, and it is modeled in 3D using SketchUp. As a result, a diffuser with a total surface area of 3.8 m<sup>2</sup> is obtained.
-                    </p>
-                    <a class="proyecto__boton boton link" href="https://drive.google.com/file/d/1nhHFr2GzUxYIxwSUvQJ6mznyl5VCRhnz/view?usp=sharing" target="_blank">See more</a>
-                </div>
-                
-                <div class="proyecto">
-                    <h4 class="proyecto__titulo negrita">Measurement of sensitivity, frequency response, directivity, and Thiele-Small parameters of a speaker</h4>
-                    <img class="proyecto__imagen" src="imagenes/proyecto_sensibilidad_direccionalidad.PNG" alt="Project 5">
-                    <p class="proyecto__descripcion descripcion justificado">This work details the process of measuring the characteristics of a speaker mounted in a cabinet. Measurements of sensitivity, frequency response, directivity, impedance, and Thiele-Small parameters were performed to carry out a subsequent analysis of the obtained results. It is worth noting that the measurements were not carried out in an acoustically treated environment, but rather in a "real" enclosure.
-                    </p>
-                    <a class="proyecto__boton boton link" href="https://drive.google.com/file/d/1_GHj7eVkEEQA_GiVCsja27Hi9Q9vGq0G/view?usp=sharing" target="_blank">See more</a>
-                </div>
-
-                <div class="proyecto">
-                    <h4 class="proyecto__titulo negrita">Redesign of the acoustics of a concert hall</h4>
-                    <img class="proyecto__imagen" src="imagenes/proyecto_acoustic_desing_concert_hall.PNG" alt="Project 6">
-                    <p class="proyecto__descripcion descripcion justificado">This study proposes an <b>acoustic redesign</b> for the auditorium of the Palacio de Bellas Artes, located in Mexico City. The objective of this redesign is to <b>improve the acoustic performance</b> of the auditorium. A comprehensive study was carried out to understand the acoustic behavior, as well as the interaction of the building with its environment. The spatial location of the cultural center was analyzed to identify possible sources of noise, and the room to be redesigned was studied to improve the line of sight while respecting local regulations.
-                    </p>
-                    <a class="proyecto__boton boton link" href="https://drive.google.com/file/d/1Uv3ZvP2DSBx2uGTpPcsnHbZfdjUDN-PK/view?usp=sharing" target="_blank">See more</a>
-                </div>
-
-                <div class="proyecto">
-                    <h4 class="proyecto__titulo negrita">Valve preamplifier for guitar with harmonic generator</h4>
-                    <img class="proyecto__imagen" src="imagenes/proyecto_amplificador_guitarra_valvular.PNG" alt="Proyecto 3">
-                    <p class="proyecto__descripcion descripcion justificado">The present project arises from the proposal to design a <b>valve preamplifier</b> for an <b>electric guitar</b>. Subsequently, the need arose for this preamplifier to have the ability to generate harmonics, in other words, to be a <b>valve distortion</b>. Then, based on the idea that the preamplifier should have two different types of distortion, a stage with silicon diodes was added. The system has the ability to generate a passive blend of both stages at the output.
-                    </p>
-                    <a class="proyecto__boton boton link" href="https://drive.google.com/file/d/1Sb5wzE-Vo2dcfgt_t2VM4yvoOH63tFfd/view?usp=sharing" target="_blank">See more</a>
-                </div>
-            </div>
-
-            <button id="mas_proyectos" class="boton">See more projects</button>
         </section>
 
-        <section id="certificaciones">
+        
+        <section id="educacion">
+            <h2 class="educacion__titulo titulo negrita">Knowledge and education</h2>
+            <div class="educacion-principal">
+                <p class="educacion__descripcion justificado descripcion">
+                My academic training as an engineer at the National University of Tres de Febrero (UNTREF) has provided me with a solid foundation in the vast field of <a href="https://untref.edu.ar/carrera/ingenieria-de-sonido" target="_blank">sound engineering</a>. During my studies, I specialized in key disciplines such as acoustic design, noise control, and electroacoustics. As the culmination of my university career, my thesis focused on research into noise pollution and urban noise, addressing innovative solutions to this challenge. At the same time, my deep passion for programming has driven me to continuously teach myself, complemented by high-level courses at institutions such as the National University of San Martín and the prestigious CS50 at Harvard, enriching my profile with valuable insight into the field of technological development.
+                </p>
 
-            <h2 class="certificaciones__titulo titulo negrita">Certifications</h2>
-            <p class="certificaciones__descripcion descripcion">
-                I want to show you a sample of the certifications and recognitions I obtained through courses and work experiences. Each certification represents an opportunity to grow and learn.
-            </p>
-
-            <div class="certificados">
-                <div class="certificado">
-                    <h4 class="certificado__titulo negrita">Python Programming</h4>
-                    <a href="imagenes/CertificadoPythonGrado.jpg" target="_blank">
-                        <img class="certificado__imagen" src="imagenes/CertificadoPythonGrado.jpg" alt="Certificado: Programación en Python">
-                    </a>
-                    <p class="certificado__descripción descripcion justificado">
-                        Certificate issued by the <b>National University of San Martín</b> on the Python programming course. During the course, topics such as <em>Machine Learning</em>, Data Analysis, and <b>OOP</b> were covered using various libraries.
-                    </p>
+                <div class="edu-item">
+                    <a href="https://untref.edu.ar/" target="_blank"><img src="imagenes/Logos/logo_untref.png" alt="Logo UNTREF" /></a>
+                    <span><h4><strong>Sound Engineer</strong></h4></span>
                 </div>
 
-                <div class="certificado">
-                    <h4 class="certificado__titulo negrita">Advanced Tutor</h4>
-                    <a href="https://accredible.tutor.com/27f22f36-90f0-475a-b106-7fb87a03b6f3#gs.4dng9j" target="_blank">
-                        <img class="certificado__imagen__escalada" src="imagenes/Advanced_tutor.png" alt="Certificado: Programación en Python">
-                    </a>
-                    <p class="certificado__descripción descripcion justificado">
-                        Badge issued by <a href="https://www.tutor.com/" target="_blank">Tutor.com</a> for achieving the level of "<b>Advanced Tutor</b>" in <b>Calculus</b> and <b>Precalculus</b> for high school and college students in the U.S.
-                    </p>
+                <div class="formacion-complementaria">
+                    <div class="institucion">
+                        <a href="https://www.unsam.edu.ar/escuelas/ecyt/" target="_blank" title="Universidad Nacional de San Martín">
+                        <img src="imagenes/Logos/Logo_UNSAM3.png" alt="Logo UNSAM" />
+                        </a>
+                        <p>Python Programming - UNSAM</p>
+                    </div>
+                    <div class="institucion">
+                        <a href="https://cs50.harvard.edu/" target="_blank" title="CS50 Harvard">
+                        <img src="imagenes/Logos/Logo_Harvard.png" alt="Logo Harvard CS50" />
+                        </a>
+                        <p>CS50 - Harvard University</p>
+                    </div>
                 </div>
 
-                <div class="certificado">
-                    <h4 class="certificado__titulo negrita">Favorite tutor of 250 students</h4>
-                    <a href="https://accredible.tutor.com/d7f678ab-7e7d-433d-9370-6376e7773d66" target="_blank">
-                        <img class="certificado__imagen__escalada" src="imagenes/250_favorite.png" alt="Reconocimiento: Tutor favorito de 250 estudiantes">
-                    </a>
-                    <p class="certificado__descripción descripcion justificado">
-                        Badge issued by <a href="https://www.tutor.com/" target="_blank">Tutor.com</a> for being selected as "<b>Favorite Tutor</b>" by 250 students on the platform. <br>
-                        Highlighted skills: <em>Friendly, Empathetic, Encouraging, Supportive.</em>
-                    </p>
-                </div>
+                <hr class="linea_divisoria">
+                <h3 class="educacion__subtitulo subtitulo">Languages I speak</h3>
+                <div id="fraseIdioma" class="descripcion cursiva"></div>
 
-                <div class="certificado">
-                    <h4 class="certificado__titulo negrita">JavaScript Algorithms and Data Structures</h4>
-                    <a href="https://www.freecodecamp.org/certification/Gaston_Caminos/javascript-algorithms-and-data-structures" target="_blank">
-                        <img class="certificado__imagen" src="imagenes/certificado_JS.PNG" alt="Certificado: Programación en Python">
-                    </a>
-                    <p class="certificado__descripción descripcion justificado">
-                        Certificate issued by <a href="https://www.freecodecamp.org">FreeCodeCamp</a> upon completing the <b>Algorithms</b> course with <b>JavaScript</b> and <b>Data Structures</b>. The course has a duration of 300 hours and covers concepts of <b>Object-Oriented Programming</b> (OOP) and <b>Functional Programming</b> (FP).
-                    </p>
-                </div>
-
-                <div class="certificado">
-                    <h4 class="certificado__titulo negrita">Responsive Web Design</h4>
-                    <a href="https://www.freecodecamp.org/certification/Gaston_Caminos/responsive-web-design" target="_blank">
-                        <img class="certificado__imagen" src="imagenes/certificado_diseño_web.PNG" alt="Certificado: Programación en Python">
-                    </a>
-                    <p class="certificado__descripción descripcion justificado">
-                        Certificate issued by <a href="https://www.freecodecamp.org">FreeCodeCamp</a> upon completing the <b>Responsive Web Design</b> course. This course, spanning 300 hours of study, focused on the concept of responsiveness in web design, providing a strong understanding of <b>HTML</b> and <b>CSS</b>.
-                    </p>
+                <div class="idiomas">
+                    <div class="banderas">
+                        <div class="idiomas__idioma">
+                            <img src="imagenes/Banderas/ar.png" alt="Español nativo" class="bandera español" />
+                            <p class="idiomas__descripcion" data-translate="espanol_nativo">Spanish - Native speaker</p>
+                        </div>
+                        <div class="idiomas__idioma">
+                            <img src="imagenes/Banderas/gb.png" alt="Inglés avanzado" class="bandera ingles" />
+                            <p class="idiomas__descripcion" data-translate="ingles">English - C1 level</p>
+                        </div>
+                        <div class="idiomas__idioma">
+                            <img src="imagenes/Banderas/ger.png" alt="Alemán avanzado" class="bandera aleman" />
+                            <p class="idiomas__descripcion" data-translate="aleman">German - B2 level</p>
+                        </div>
+                    </div>
+                    <div class="cui">
+                        <a href="https://cui.edu.ar/" target="_blank"><img src="imagenes/Logos/cui.png" alt="Centro Universitario de Idiomas - CUI" class="cui" /></a>
+                    </div>
                 </div>
             </div>
 
+            <hr class="linea_divisoria">
+            <h3 class="educacion__subtitulo subtitulo" id="certificaciones">Key certifications and skills</h3>
+            <div class="certificaciones-clave">
+                <div class="burbujas-certificaciones">
+                    <div class="burbuja-certificacion">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"  alt="Python" class="logo-certificacion" />
+                        <p><strong>Python</strong> programming</p>
+                    </div>
+                    <div class="burbuja-certificacion">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"  alt="SQL" class="logo-certificacion" />
+                        <p>Database management with <strong>SQL</strong></p>
+                    </div> 
+                    <div class="burbuja-certificacion">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"  alt="Flask" class="logo-certificacion" />
+                        <p>Web apps and APIs with <strong>Flask</strong></p>
+                    </div> 
+                    <div class="burbuja-certificacion">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C" class="logo-certificacion" />
+                        <p><strong>C</strong> programming</p>
+                    </div>
+                    <div class="burbuja-certificacion"> 
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" class="logo-certificacion"  />
+                        <p><strong>JavaScript</strong> programming</p>
+                    </div>
+                    <div class="burbuja-certificacion">   
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" alt="MATLAB" class="logo-certificacion"/>
+                        <p><strong>MATLAB</strong> programming</p>
+                    </div> 
+                    <div class="burbuja-certificacion">  
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" alt="HTML 5" class="logo-certificacion"/>
+                        <p>Web development with <strong>HTML 5</strong></p>
+                    </div>
+                    <div class="burbuja-certificacion">   
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" alt="CSS 3" class="logo-certificacion"/>
+                        <p>Web development with <strong>CSS 3</strong></p>
+                    </div>
+                    <div class="burbuja-certificacion">   
+                        <img src="imagenes/Logos/audinate_logo.png" alt="Dante nivel 1" class="logo-certificacion"/>
+                        <p>Level 1 <strong>Dante</strong> certification</p>
+                    </div>
+                    <div class="burbuja-certificacion">   
+                        <img src="imagenes/Logos/wwise_logo.png" alt="Wwise" class="logo-certificacion"/>
+                        <p>Sound design with <strong>Wwise</strong></p>
+                    </div>
+                    <div class="burbuja-certificacion">   
+                        <img src="imagenes/Logos/autocad_logo.png" alt="AutoCad" class="logo-certificacion"/>
+                        <p>Design with <strong>AutoCad</strong></p>
+                    </div> 
+                    <div class="burbuja-certificacion">   
+                        <img src="imagenes/Logos/logo_blender.png" alt="Blender" class="logo-certificacion"/>
+                        <p>3D design with <strong>Blender</strong></p>
+                    </div> 
+                </div>
+            </div>
+          
+            <div class="certificados-seminarios">
+                <!--<h3 class="educacion__subtitulo subtitulo" style="margin-top: 2em;">Certificados de seminarios</h3>-->
+                <div class="grid-certificados">
+                    <div class="certificado-item" data-img="imagenes/Certificados/Certificado_infrasonido.png">
+                        <img src="imagenes/Certificados/Certificado_infrasonido.png" alt="Certificado Seminario 1" />
+                    </div>
+                    <div class="certificado-item" data-img="imagenes/Certificados/Certificado_fisiologia_auditiva.png">
+                        <img src="imagenes/Certificados/Certificado_fisiologia_auditiva.png" alt="Certificado Seminario 2" />
+                    </div>
+                    <div class="certificado-item" data-img="imagenes/Certificados/Certificado_Dante.png">
+                        <img src="imagenes/Certificados/Certificado_Dante.png" alt="Certificado Seminario 3" />
+                    </div>
+                    <div class="certificado-item"  data-img="imagenes/Certificados/CertificadoPythonGrado.jpg">
+                        <img src="imagenes/Certificados/CertificadoPythonGrado.jpg" alt="Certificado Seminario 4" />
+                    </div>
+                    <div class="certificado-item"  data-img="imagenes/Certificados/Certificado_inmersion_ia_alura_latam.png">
+                        <img src="imagenes/Certificados/Certificado_inmersion_ia_alura_latam.png" alt="Certificado Seminario 5" />
+                    </div>
+                    <div class="certificado-item"  data-img="imagenes/Certificados/Certificado_flujos_de_trabajo_con_ia_big_school.png">
+                        <img src="imagenes/Certificados/Certificado_flujos_de_trabajo_con_ia_big_school.png" alt="Certificado Seminario 6" />
+                    </div>
+                    <div class="certificado-item"  data-img="imagenes/Certificados/certificado_diseño_web.PNG">
+                        <img src="imagenes/Certificados/certificado_diseño_web.PNG" alt="Certificado Seminario 7" />
+                    </div>
+                    <div class="certificado-item"  data-img="imagenes/Certificados/certificado_JS.PNG">
+                        <img src="imagenes/Certificados/certificado_JS.PNG" alt="Certificado Seminario 8" />
+                    </div>
+                    <div class="certificado-item"  data-img="imagenes/Certificados/Certificado_Power_BI.jpg">
+                        <img src="imagenes/Certificados/Certificado_Power_BI.jpg" alt="Certificado Seminario 9" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal para certificados -->
+            <div id="modal-certificados" class="modal oculto">
+                <span id="modal-certificados-close" class="modal-close">&times;</span>
+                <img id="modal-certificados-content" src="" alt="Certificado ampliado" />
+            </div>
+
         </section>
-
-        <section id="contacto">
-
+        
+       <section id="contacto">
             <h2 class="contacto__titulo titulo negrita">Contact</h2>
             <p class="contacto__descripcion descripcion">
-                Did something you see on my profile catch your interest, or would you like to know more? I invite you to get in touch with me via email by sending a message or a text, and I will gladly receive any proposal you have, aiming to respond promptly.
+                You can reach me out through the following means:
             </p>
 
-            <ul class="contacto__lista">
-                <li class="contacto__item">E-mail: <a href="mailto:gastoncaminos98@gmail.com">gastoncaminos98@gmail.com</a></li>
-                <li class="contacto__item">Phone number: <a href="https://wa.me/541156378127" target="_blank">(+54 - 11) - 5637 - 8127</a>.</li>
-                <li class="contacto__item">Linkedin: <a href="https://www.linkedin.com/in/gast%C3%B3n-caminos/" target="_blank">Gastón Caminos</a>.</li>
-            </ul>
+            <div class="contacto__grid">
+            <!-- Email -->
+            <div class="contacto__item">
+                <a href="mailto:gastoncaminos98@gmail.com" target="_blank" class="red-social">
+                <img src="imagenes/Logos/logo_gmail.png" alt="Email">
+                </a>
+                <p class="contacto__texto">gastoncaminos98@gmail.com</p>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="contacto__item">
+                <a href="https://wa.me/5491156378127?text=¡Hola,%20Gastón!%20Vi%20tu%20portafolio%20y%20quiero%20conocer%20más%20sobre%20tu%20trabajo." target="_blank" class="red-social">
+                <img src="imagenes/Logos/logo_whatsapp.png" alt="WhatsApp">
+                </a>
+                <p class="contacto__texto">+54 9 11 5637-8127</p>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contacto__item">
+                <a href="https://www.linkedin.com/in/gast%C3%B3n-caminos/" target="_blank" class="red-social">
+                <img src="imagenes/Logos/logo_linkedin.png" alt="LinkedIn">
+                </a>
+                <p class="contacto__texto">Gastón Gabriel Caminos</p>
+            </div>
+
+            <!-- Instagram -->
+            <div class="contacto__item">
+                <a href="https://www.instagram.com/beluga.acustica/" target="_blank" class="red-social">
+                <img src="imagenes/Logos/logo_instagram.png" alt="Instagram">
+                </a>
+                <p class="contacto__texto">beluga.acustica</p>
+            </div>
+
+            <!-- GitHub -->
+            <div class="contacto__item">
+                <a href="https://github.com/Gaston-Caminos" target="_blank" class="red-social">
+                <img src="imagenes/Logos/logo_github.png" alt="GitHub">
+                </a>
+                <p class="contacto__texto">Gaston-Caminos</p>
+            </div>
+
+            <!-- ResearchGate -->
+            <div class="contacto__item">
+                <a href="https://www.researchgate.net/profile/Gaston-Caminos?ev=hdr_xprf" target="_blank" class="red-social">
+                <img src="imagenes/Logos/logo_researchgate.png" alt="ResearchGate">
+                </a>
+                <p class="contacto__texto">ResearchGate</p>
+            </div>
+            </div>
 
             <p class="contacto__descripcion descripcion">
-                Thank you very much for taking a tour of my personal website; I hope you liked it. I wish you an excellent day!
+                Thank you very much for visiting my site! Have a great day!
             </p>
-
         </section>
-
         <a href="#sobre_mi" class="flotante"><iconify-icon icon="solar:map-arrow-up-line-duotone"></iconify-icon></a>
     </body>
 
     <footer class="footer">
         <div class="creditos">
-            <p class="creditos__nombre">© 2023 Crated by Gastón Caminos</p>
+            <p class="creditos__nombre">© 2025 Created by Gastón G. Caminos</p>
             <ul class="social-icons">
-                <li><a href="https://www.linkedin.com/in/gast%C3%B3n-caminos/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/Gaston-Caminos" target="_blank"><i class="fab fa-github"></i></a></li>
                 <li><a href="mailto:gastoncaminos98@gmail.com"><i class="fas fa-envelope"></i></a></li>
-                <li><a href="https://drive.google.com/file/d/1H184-m8MPLSGVIhbX53DiUFu8qS11nBp/view?usp=sharing" target="_blank" download><i class="fas fa-file-alt"></i>
-                </a>
-                </li>
+                <li><a href="https://wa.me/5491156378127?text=¡Hola,%20Gastón!%20Vi%20tu%20portafolio%20y%20quiero%20conocer%20más%20sobre%20tu%20trabajo."><i class="fa-brands fa-whatsapp"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/gast%C3%B3n-caminos/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://www.instagram.com/gaston.g.caminos/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://github.com/Gaston-Caminos" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.researchgate.net/profile/Gaston-Caminos?ev=hdr_xprf" target="_blank"><i class="fa-brands fa-researchgate"></i></a></li>
+                <!--<li><a href="https://drive.google.com/file/d/1Gk17HSxfbDwdR4RZw_AlIs2yT2bKzw00/view?usp=sharing" target="_blank" download><i class="fas fa-file-alt"></i></a></li>-->
             </ul>
             
             <p class="version_beta"><iconify-icon icon="ph:gear-six-light"></iconify-icon> Beta version</p>
